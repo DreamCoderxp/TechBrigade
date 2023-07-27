@@ -127,9 +127,7 @@ public class Laptop {
     public void setScreenSize(String screenSize) {
     	if(screenSize == null || screenSize.length() == 0) {
     		throw new IllegalArgumentException("Screen size cannot be empty");
-    	} else if(!(screenSize.equals("13.3") || screenSize.equals("14") || screenSize.equals("15.6") || screenSize.equals("17.3"))) {
-    		throw new IllegalArgumentException("Screen size must be either 13.3, 14, 15.6, or 17.3 inches");
-    	} else {
+    	}else {
     		this.screenSize = screenSize;
     	}
     }

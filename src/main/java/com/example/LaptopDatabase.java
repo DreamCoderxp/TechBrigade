@@ -11,6 +11,11 @@ public class LaptopDatabase {
         loadFromCSV(filename);
     }
 
+    //This is the method that will be called from the controller
+    public List<Laptop> getLaptops() {
+        return laptops;
+    }
+
     private void loadFromCSV(String filename) throws FileNotFoundException {
         try (Scanner scanner = new Scanner(new File(filename))) {
             scanner.useDelimiter(",|\r\n");
