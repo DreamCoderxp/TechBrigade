@@ -2,7 +2,10 @@ package com.example;
 
 public class Laptop {
     private String name;
+
+	private String cpuManufacturer;
     private String cpu;
+	private String gpu;
     private int ram;
     private int storage;
     private String storageType;
@@ -11,10 +14,13 @@ public class Laptop {
     private String ports;
     private int geekbenchScore;
     private double price;
+	private String url;
 
-    public Laptop(String name, String cpu, int ram, int storage, String storageType, double weight, String screenSize, String ports, int geekbenchScore, double price) {
+    public Laptop(String name, String cpuManufacturer, String cpu, String gpu, int ram, int storage, String storageType, double weight, String screenSize, String ports, int geekbenchScore, double price, String url) {
         this.name = name;
+		this.cpuManufacturer = cpuManufacturer;
         this.cpu = cpu;
+		this.gpu = gpu;
         this.ram = ram;
         this.storage = storage;
         this.storageType = storageType;
@@ -23,6 +29,7 @@ public class Laptop {
         this.ports = ports;
         this.geekbenchScore = geekbenchScore;
         this.price = price;
+		this.url = url;
     }
 
     // Add your getter and setter methods here...
@@ -31,9 +38,17 @@ public class Laptop {
         	return name;
     }
 
+	public String getCpuManufacturer() {
+		return cpuManufacturer;
+	}
+
     public String getCpu() {
     	return cpu;
     }
+
+	public String getGpu() {
+		return gpu;
+	}
 
     public int getRam() {
     	return ram;
@@ -67,6 +82,10 @@ public class Laptop {
     	return price;
     }
 
+	public String getImageUrl() {
+		return url;
+	}
+
     //make setters protected against bad input
     public void setName(String name) {
     	if(name == null || name.length() == 0) {
@@ -76,6 +95,14 @@ public class Laptop {
     	}
     }
 
+	public void setCpuManufacturer(String cpuManufacturer) {
+		if(cpuManufacturer == null || cpuManufacturer.length() == 0) {
+			throw new IllegalArgumentException("CPU manufacturer cannot be empty");
+		} else {
+			this.cpuManufacturer = cpuManufacturer;
+		}
+	}
+
     public void setCpu(String cpu) {
     	if(cpu == null || cpu.length() == 0) {
     		throw new IllegalArgumentException("CPU cannot be empty");
@@ -83,6 +110,14 @@ public class Laptop {
     		this.cpu = cpu;
     	}
     }
+
+	public void setGpu(String gpu) {
+		if(gpu == null || gpu.length() == 0) {
+			throw new IllegalArgumentException("GPU cannot be empty");
+		} else {
+			this.gpu = gpu;
+		}
+	}
 
     public void setRam(int ram) {
     	if(ram < 0 ) {
@@ -160,10 +195,18 @@ public class Laptop {
     	}
     }
 
+	public void setUrl(String url) {
+		if(url == null || url.length() == 0) {
+			throw new IllegalArgumentException("URL cannot be empty");
+		} else {
+			this.url = url;
+		}
+	}
+
 
     @Override
     public String toString() {
-        return "Laptop: " + name + ", CPU: " + cpu + ", RAM: " + ram + "GB, Storage: " + storage + storageType + ", Weight: " + weight + "kg, Screen Size: " + screenSize +
-                ", Ports: " + ports + ", Geekbench Score: " + geekbenchScore + ", Price: $" + price;
+        return "Laptop: " + name + ", CPU: " + cpu +" "+ cpuManufacturer + ", GPU: " + gpu + ", RAM: " + ram + "GB, Storage: " + storage + " GB " + storageType + ", Weight: " + weight + "lb, Screen Size: " + screenSize +
+                ", Ports: " + ports + ", Geekbench Score: " + geekbenchScore + ", Price: $" + price + ", URL: " + url;
     }
 }

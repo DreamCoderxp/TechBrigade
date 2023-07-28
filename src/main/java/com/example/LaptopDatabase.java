@@ -27,9 +27,9 @@ public class LaptopDatabase {
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                String[] attributes = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                String[] attributes = line.split(",");
 
-                // Remove quotation marks if present
+                // Removing the double quotes
                 for (int i = 0; i < attributes.length; i++) {
                     attributes[i] = attributes[i].replaceAll("^\"|\"$", "");
                 }
@@ -42,20 +42,24 @@ public class LaptopDatabase {
 
     private Laptop createLaptop(String[] metadata) {
         String name = metadata[0];
-        String cpu = metadata[1];
-        int ram = Integer.parseInt(metadata[2]);
-        int storage = Integer.parseInt(metadata[3]);
-        String storageType = metadata[4];
-        double weight = Double.parseDouble(metadata[5]);
-        String screenSize = metadata[6];
-        String ports = metadata[7];
-        int geekbenchScore = Integer.parseInt(metadata[8]);
-        double price = Double.parseDouble(metadata[9]);
+        String cpuManufacturer = metadata[1];
+        String cpu = metadata[2];
+        String gpu = metadata[3];
+        int ram = Integer.parseInt(metadata[4]);
+        int storage = Integer.parseInt(metadata[5]);
+        String storageType = metadata[6];
+        double weight = Double.parseDouble(metadata[7]);
+        String screenSize = metadata[7];
+        String ports = metadata[9];
+        int geekbenchScore = Integer.parseInt(metadata[10]);
+        double price = Double.parseDouble(metadata[11]);
+        String url = metadata[12];
 
-        return new Laptop(name, cpu, ram, storage, storageType, weight, screenSize, ports, geekbenchScore, price);
+        return new Laptop(name, cpuManufacturer, cpu, gpu ,ram, storage, storageType, weight, screenSize, ports, geekbenchScore, price, url);
     }
 
-    // Add your filter methods here...
+    // Filters methods here
+
 
 }
 

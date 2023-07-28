@@ -7,7 +7,8 @@ public class CSVCreator {
     public static void createCSV(String filename) {
         try (PrintWriter writer = new PrintWriter(new File(filename))) {
             StringBuilder sb = new StringBuilder();
-            sb.append("\"Name\",\"CPU\",\"RAM\",\"Storage\",\"Storage Type\",\"Weight\",\"Screen Size\",\"Ports\",\"Geekbench Score\",\"Price\"\n");
+            //this is the header of the csv file
+            sb.append("\"Name\", \"CPU Manufacturer\",\"CPU\", \"GPU\",\"RAM\",\"Storage\",\"Storage Type\",\"Weight\",\"Screen Size\",\"Ports\",\"Geekbench Score\",\"Price\", \"URL\"\n");
 
             Scanner scanner = new Scanner(System.in);
             String continueAdding = "y";
@@ -22,6 +23,13 @@ public class CSVCreator {
                     sb.append('"').append(name).append("\",");
                 }
 
+                System.out.println("Enter laptop CPU Manufacturer:");
+                String cpuManufacturer = scanner.nextLine();
+                if(cpuManufacturer == null || cpuManufacturer.length() == 0) {
+                    throw new IllegalArgumentException("CPU Manufacturer cannot be empty");
+                } else {
+                    sb.append('"').append(cpuManufacturer).append("\",");
+                }
 
                 System.out.println("Enter laptop CPU:");
                 String cpu = scanner.nextLine();
@@ -31,6 +39,14 @@ public class CSVCreator {
                     sb.append('"').append(cpu).append("\",");
                 }
 
+                System.out.println("Enter laptop GPU:");
+                String gpu = scanner.nextLine();
+                if(gpu == null || gpu.length() == 0) {
+                    throw new IllegalArgumentException("GPU cannot be empty");
+                } else {
+                    sb.append('"').append(gpu).append("\",");
+                }
+
                 System.out.println("Enter laptop RAM:");
                 int ram = Integer.parseInt(scanner.nextLine());
                 if(ram < 0) {
@@ -38,7 +54,7 @@ public class CSVCreator {
                 } else if (ram > 256) {
                     throw new IllegalArgumentException("RAM cannot be greater than 256 GB");
                 } else {
-                    sb.append(ram).append("\",");
+                    sb.append('"').append(ram).append("\",");
                 }
 
                 System.out.println("Enter laptop storage:");
@@ -48,7 +64,7 @@ public class CSVCreator {
                 } else if (storage > 10000) {
                     throw new IllegalArgumentException("Storage cannot be greater than 10000 GB");
                 } else {
-                    sb.append(storage).append("\",");
+                    sb.append('"').append(storage).append("\",");
                 }
 
                 System.out.println("Enter laptop storage type:");
@@ -68,7 +84,7 @@ public class CSVCreator {
                 } else if (weight > 20) {
                     throw new IllegalArgumentException("Weight cannot be greater than 20 pounds");
                 } else {
-                    sb.append(weight).append("\",");
+                    sb.append('"').append(weight).append("\",");
                 }
 
                 System.out.println("Enter laptop screen size:");
@@ -94,7 +110,7 @@ public class CSVCreator {
                 } else if (geekbenchScore > 30000) {
                     throw new IllegalArgumentException("Geekbench MultiCore score cannot be greater than 30000");
                 } else {
-                    sb.append(geekbenchScore).append("\",");
+                    sb.append('"').append(geekbenchScore).append("\",");
                 }
 
                 System.out.println("Enter laptop price (in CAD):");
@@ -104,7 +120,15 @@ public class CSVCreator {
                 } else if (price > 10000) {
                     throw new IllegalArgumentException("Price cannot be greater than $10000");
                 } else {
-                    sb.append(price).append("\"");
+                    sb.append('"').append(price).append("\"");
+                }
+
+                System.out.println("Enter laptop image URL:");
+                String url = scanner.nextLine();
+                if(url == null || url.length() == 0) {
+                    throw new IllegalArgumentException("URL cannot be empty");
+                } else {
+                    sb.append(",\"").append(url).append("\"");
                 }
 
                 // Add a new line after each laptop entry to separate them in the CSV file
