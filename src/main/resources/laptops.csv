@@ -1,0 +1,3 @@
+"Name", "CPU Manufacturer","CPU", "GPU","RAM","Storage","Storage Type","Weight","Screen Size","Ports","Geekbench Score","Price"
+"dell","intel","i7","nvidia 3050","32","512","SSD","5.0","15.3","plenty","12000","949.0"
+"katana msi","amd","ryzen 7","nvidia 4080","16","2048","SSD","3.0","17.3","only power type c and hdmi","16000","1988.0"
