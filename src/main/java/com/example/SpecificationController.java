@@ -56,7 +56,7 @@ public class SpecificationController {
         String screenSizeValue = selectedScreenButton.getText();
 
         
-
+        
 
 
 
@@ -79,4 +79,20 @@ public class SpecificationController {
 
     }
 
+    protected int convertRamValue(String ramValue) {
+        // TODO Auto-generated method stub
+        int ramInt = 0;
+
+        if (ramValue.equals("8 GB")) {
+            ramInt = 8;
+
+        } else if (ramValue.equals("16 GB")) {
+            ramInt = 16;
+        } else if (ramValue.equals("32 GB")) {
+            ramInt = 32;
+        } 
+
+
+        return ramInt;
+    }
 }
