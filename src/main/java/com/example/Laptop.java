@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.ArrayList;
+
 public class Laptop {
     private int id;
     private String name;
@@ -21,6 +23,28 @@ public class Laptop {
     private int warranty;
     private double review;
 
+
+    public Laptop(ArrayList<String> laptopSpecs) {
+        this.id = Integer.parseInt(laptopSpecs.get(0));
+        this.name = laptopSpecs.get(1);
+        this.cost = Double.parseDouble(laptopSpecs.get(2));    
+        this.ram = Integer.parseInt(laptopSpecs.get(3));
+        this.storage = Integer.parseInt(laptopSpecs.get(4));           
+        this.cpuType = laptopSpecs.get(5);
+        this.processor = laptopSpecs.get(6);
+        this.os = laptopSpecs.get(7);
+        this.screenSize = Double.parseDouble(laptopSpecs.get(8));
+        this.weight = Double.parseDouble(laptopSpecs.get(9));
+        this.batteryLife = Double.parseDouble(laptopSpecs.get(10));     
+        this.backlit = Boolean.parseBoolean(laptopSpecs.get(11));
+        this.touchScreen = Boolean.parseBoolean(laptopSpecs.get(12));
+        this.twoInOne = Boolean.parseBoolean(laptopSpecs.get(13));
+        this.portability = Integer.parseInt(laptopSpecs.get(14));
+        this.benchmark = Integer.parseInt(laptopSpecs.get(15));
+        this.warranty = Integer.parseInt(laptopSpecs.get(16));
+        this.review = Double.parseDouble(laptopSpecs.get(17));
+         this.brand = laptopSpecs.get(18);
+    }
     
     public int getId() {
         return id;
