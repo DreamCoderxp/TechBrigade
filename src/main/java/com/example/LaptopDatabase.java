@@ -6,10 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LaptopDatabase {
-   
-    
-
-
+ 
     protected ArrayList<Laptop> getSpecLaptops(int ram,String cpu, double screenSize) {
             String ramString = Integer.toString(ram);
             String screenSizeString = Double.toString(screenSize);
@@ -25,7 +22,10 @@ public class LaptopDatabase {
             //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
-           
+            for(int i=0;i<laptopData.length;i++) {
+                laptopData[i] = laptopData[i].replaceAll("\"", "");
+            }
+
                 if(laptopData[3].equals(ramString)&& laptopData[5].equals(cpu)&& laptopData[8].equals(screenSizeString)) {
                    
                     for(int i=0;i<laptopData.length;i++) {
@@ -34,7 +34,6 @@ public class LaptopDatabase {
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
                 }
-
 
             }
             input.close();

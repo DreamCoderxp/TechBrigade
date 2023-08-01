@@ -2,7 +2,6 @@ package com.example;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -62,7 +61,12 @@ public class SpecificationController {
 
         LaptopDatabase speclaptopsDB = new LaptopDatabase();
         ArrayList<Laptop> filteredLaptops=  speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
-        
+
+        System.out.println(filteredLaptops);
+        for(Laptop laptop: filteredLaptops) {
+            System.out.println(laptop.getName());
+        }
+
     }
 
     @FXML
