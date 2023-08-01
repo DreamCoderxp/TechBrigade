@@ -14,6 +14,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage;
 
     /**
      *
@@ -22,6 +23,7 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
+        App.stage = stage;
         scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
@@ -39,6 +41,11 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    public static Stage getStage() {
+        return stage;
+    }
+
 
     public void showSpecFilter() throws IOException {
         // Parent root =
