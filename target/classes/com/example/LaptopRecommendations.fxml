@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.LaptopRecommendationsController">
+    <children>
+        <TableView fx:id="laptopTable">
+            <columns>
+                <TableColumn text="Name" fx:id="nameColumn" />
+                <TableColumn text="CPU" fx:id="cpuColumn" />
+                <TableColumn text="GPU" fx:id="gpuColumn" />
+                <TableColumn text="RAM (GB)" fx:id="ramColumn" />
+                <TableColumn text="Storage (GB)" fx:id="storageColumn" />
+                <TableColumn text="Weight (lb)" fx:id="weightColumn" />
+                <TableColumn text="Screen Size" fx:id="screenSizeColumn" />
+                <TableColumn text="Ports" fx:id="portsColumn" />
+                <TableColumn text="Geekbench Score" fx:id="geekbenchColumn" />
+                <TableColumn text="Price ($)" fx:id="priceColumn" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
