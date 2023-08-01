@@ -40,4 +40,20 @@ public class App extends Application {
         launch();
     }
 
+    public void showSpecFilter() throws IOException {
+        // Parent root =
+        // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
+
+        Parent root = loader.load();
+        SpecificationController controller = loader.getController();
+        // controller.setscene(scene);
+
+        Stage stage = new Stage();
+        stage.setTitle("Specification Filter");
+        stage.setScene(new Scene(root, 640, 480));
+        stage.show();
+
+    }
 }
