@@ -34,24 +34,36 @@ public class SpecificationController {
     private ToggleGroup sSize;
 
 
-
+    @FXML
     protected void initialize() {
         // TODO Auto-generated method stub
         
     }
 
+    @FXML
     protected void applySpecFilter() {
         // TODO Auto-generated method stub
 
         //generate code for getting the selected values from radio button  toggle groups in the fxml file
-        RadioButton selectedRadioButton=  (RadioButton)ram.getSelectedToggle();
-        String ramValue = selectedRadioButton.getText();
+        RadioButton selectedRamButton=  (RadioButton)ram.getSelectedToggle();
+        String ramValue = selectedRamButton.getText();
+        System.out.println(ramValue);
+
+        RadioButton selectedCpuButton=  (RadioButton)cpu.getSelectedToggle();
+        String cpuValue = selectedCpuButton.getText();
+
+        RadioButton selectedScreenButton=  (RadioButton)sSize.getSelectedToggle();
+        String screenSizeValue = selectedScreenButton.getText();
+
         
+
+
 
 
         
     }   
 
+    @FXML
     protected void showSpecFilterApplied() throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilterApplied.fxml"));

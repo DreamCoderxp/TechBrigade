@@ -1,6 +1,7 @@
 package com.example;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,6 +15,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage;
 
     /**
      *
@@ -22,9 +24,9 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("HighEndLaptopRecommendations"));
+        App.stage = stage;
+        scene = new Scene(loadFXML("SpecificationFilter"), 640, 480);
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.show();
     }
 
@@ -41,4 +43,27 @@ public class App extends Application {
         launch();
     }
 
+    public static Stage getStage() {
+        return stage;
+    }
+
+    @FXML
+    public void showSpecFilter() throws IOException {
+        // Parent root =
+        // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
+
+        Parent root = loader.load();
+        SpecificationController controller = loader.getController();
+        // controller.setscene(scene);
+
+        Stage stage = new Stage();
+        scene= new Scene(root,1500,1500);
+        stage.setTitle("Specification Filter");
+        stage.setScene(scene);
+       // stage.setResizable(true);
+        stage.show();
+
+    }
 }
