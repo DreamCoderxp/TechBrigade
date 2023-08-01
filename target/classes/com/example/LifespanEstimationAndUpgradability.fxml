@@ -1,7 +1,0 @@
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.LifespanEstimationAndUpgradabilityController">
-    <Button text="Lifespan Estimation &amp; Upgradability" onAction="#handleLifespanAndUpgradability" />
-    <ImageView fx:id="laptopImage" fitHeight="200" fitWidth="200" />
-    <Label text="Filtered Features of the Laptop:" />
-    <!-- Add more labels or UI elements for filtered features -->
-    <Button text="Upgradability" onAction="#showUpgradability" />
-</VBox>

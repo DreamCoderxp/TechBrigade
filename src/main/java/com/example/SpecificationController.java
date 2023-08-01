@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 
 public class SpecificationController {
 
+    ArrayList<Laptop> filteredLaptops;
+
     @FXML
     // create fields for all the radio button toggle groups in the fxml file
     private RadioButton ramBt1;
@@ -42,7 +44,7 @@ public class SpecificationController {
     }
 
     @FXML
-    protected void applySpecFilter() {
+    protected void applySpecFilter() throws IOException {
         // TODO Auto-generated method stub
 
         // generate code for getting the selected values from radio button toggle groups
@@ -62,29 +64,44 @@ public class SpecificationController {
         double screenSizeDouble = convertScreenSizeValue(screenSizeValue);
 
         LaptopDatabase speclaptopsDB = new LaptopDatabase();
-        ArrayList<Laptop> filteredLaptops=  speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
+         filteredLaptops=  speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
 
         //System.out.println(filteredLaptops);
         for(Laptop laptop: filteredLaptops) {
-            System.out.println(laptop.getName());
+            System.out.println(laptop.toString());
         }
+
+        // generate code for showing the filtered laptops in a new window
+        showSpecFilterApplied();
+        
+
 
     }
 
     @FXML
-    protected void showSpecFilterApplied() throws IOException {
+protected void showSpecFilterApplied() throws IOException {
+    if (filteredLaptops.isEmpty()) {
+        // If the filteredLaptops ArrayList is empty, just load and set the SpecificationFilter.fxml
+        Parent root = FXMLLoader.load(getClass().getResource("SpecificationFilter.fxml"));
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilterApplied.fxml"));
-
+        Stage stage = App.getStage();
+        stage.setTitle("Specification Filter");
+        stage.setScene(new Scene(root));
+        stage.show();
+    } else {
+        // If filteredLaptops is not empty, proceed with showing the specFilterApplied.fxml
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecFilterApplied.fxml"));
         Parent root = loader.load();
-        SpecificationController controller = loader.getController();
+        specFilterAppliedController controller = loader.getController();
+        controller.showLaptops(filteredLaptops);
 
         Stage stage = App.getStage();
         stage.setTitle("Specification Filter Applied");
-        stage.setScene(new Scene(root, 640, 480));
+        stage.setScene(new Scene(root));
         stage.show();
-
     }
+}
+
 
     protected int convertRamValue(String ramValue) {
         // TODO Auto-generated method stub

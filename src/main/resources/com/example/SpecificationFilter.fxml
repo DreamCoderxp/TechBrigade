@@ -96,12 +96,12 @@
             <RadioButton fx:id="ramBt1" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="4 GB " toggleGroup="$ram" GridPane.columnIndex="1" />
             <RadioButton fx:id="cpuBt1" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="AMD" toggleGroup="$cpu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <RadioButton fx:id="cpuBt3" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="MacOS" toggleGroup="$cpu" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-            <RadioButton fx:id="screenBt1" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="(&lt;12&quot;)" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <RadioButton fx:id="screenBt1" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="13.3&quot;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <toggleGroup>
                   <ToggleGroup fx:id="sSize" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="screenBt3" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="(14.1&quot;-15.6&quot;)" toggleGroup="$sSize" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-            <RadioButton fx:id="screenBt2" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="(12.1&quot;- 14&quot;)" toggleGroup="$sSize" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <RadioButton fx:id="screenBt3" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="15.6&quot;" toggleGroup="$sSize" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <RadioButton fx:id="screenBt2" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="14&quot;" toggleGroup="$sSize" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>

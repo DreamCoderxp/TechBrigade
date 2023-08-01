@@ -161,5 +161,13 @@ public class Laptop {
         this.review = review;
     }
     
+    @Override
+    public String toString(){
+        return "Laptop [id=" + id + ", name=" + name + ", brand=" + brand + ", processor=" + processor + ", ram=" + ram
+                + ", storage=" + storage + ", cost=" + cost + ", os=" + os + ", cpuType=" + cpuType + ", screenSize="
+                + screenSize + ", weight=" + weight + ", batteryLife=" + batteryLife + ", touchScreen=" + touchScreen
+                + ", backlit=" + backlit + ", twoInOne=" + twoInOne + ", portability=" + portability + ", benchmark="
+                + benchmark + ", warranty=" + warranty + ", review=" + review + "]";
+    }
 
 }
