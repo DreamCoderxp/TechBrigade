@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -70,12 +69,3 @@
       </GridPane>
    </children>
 </AnchorPane>
-=======
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CostSavingAnalysisController">
-    <Button text="Cost-Saving Analysis" onAction="#handleCostSavingAnalysis" />
-    <ImageView fx:id="laptopImage" fitHeight="200" fitWidth="200" />
-    <Label text="Filtered Features of the Laptop:" />
-    <!-- Add more labels or UI elements for filtered features -->
-    <Button text="Show Price Comparison" onAction="#showPriceComparison" />
-</VBox>
->>>>>>> JaskaranRemote/Version_0.1
