@@ -25,7 +25,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         App.stage = stage;
-        scene = new Scene(loadFXML("SpecificationFilter"));
+        scene = new Scene(loadFXML("Portability"));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

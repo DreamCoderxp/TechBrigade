@@ -78,21 +78,23 @@ public class SpecificationController {
         // generate code for showing the filtered laptops in a new window
         showSpecFilterApplied();
         
-        
+
 
     }
 
     @FXML
 protected void showSpecFilterApplied() throws IOException {
     if (filteredLaptops.isEmpty()) {
-        // If the filteredLaptops ArrayList is empty, just load and set the SpecificationFilter.fxml
-        Parent root = FXMLLoader.load(getClass().getResource("SpecificationFilter.fxml"));
+        // // If the filteredLaptops ArrayList is empty, just load and set the SpecificationFilter.fxml
+        // Parent root = FXMLLoader.load(getClass().getResource("SpecificationFilter.fxml"));
 
+       
+        // Stage stage = App.getStage();
+
+        // stage.setTitle("Specification Filter");
+        // stage.setScene(new Scene(root));
         message.setText("No laptops found. Please try again.");
-        Stage stage = App.getStage();
-        stage.setTitle("Specification Filter");
-        stage.setScene(new Scene(root));
-        stage.show();
+     //   stage.show();
     } else {
         // If filteredLaptops is not empty, proceed with showing the specFilterApplied.fxml
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecFilterApplied.fxml"));
