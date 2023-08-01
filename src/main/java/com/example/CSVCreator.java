@@ -14,7 +14,7 @@ public class CSVCreator {
             String continueAdding = "y";
 
             while (continueAdding.equalsIgnoreCase("y")) {
-                System.out.println("Enter laptop name:"); //we will apply same filter to input as we did in setters of Laptop class
+                System.out.println("Enter laptop name:"); //we will apply same filter to input as we did in setters of HighEndLaptop class
                 String name = scanner.nextLine();
                 if(name == null || name.length() == 0) {
                     throw new IllegalArgumentException("Name cannot be empty");

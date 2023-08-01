@@ -14,6 +14,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage; // new field to hold reference to the stage
 
     /**
      *
@@ -22,7 +23,8 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("HighEndLaptopRecommendations"));
+        App.stage = stage; // assign incoming stage to the static field
+        scene = new Scene(loadFXML("ProgramSelection"));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -30,6 +32,11 @@ public class App extends Application {
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+    }
+
+    // Added a new static method getStage to return the current stage.
+    public static Stage getStage() {
+        return stage;
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
@@ -40,5 +47,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

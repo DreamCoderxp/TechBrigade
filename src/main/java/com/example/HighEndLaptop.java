@@ -1,6 +1,6 @@
 package com.example;
 
-public class Laptop {
+public class HighEndLaptop {
     private String name;
 
 	private String cpuManufacturer;
@@ -16,7 +16,7 @@ public class Laptop {
     private double price;
 	private String url;
 
-    public Laptop(String name, String cpuManufacturer, String cpu, String gpu, int ram, int storage, String storageType, double weight, String screenSize, String ports, int geekbenchScore, double price, String url) {
+    public HighEndLaptop(String name, String cpuManufacturer, String cpu, String gpu, int ram, int storage, String storageType, double weight, String screenSize, String ports, int geekbenchScore, double price, String url) {
         this.name = name;
 		this.cpuManufacturer = cpuManufacturer;
         this.cpu = cpu;
@@ -206,7 +206,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop: " + name + ", CPU: " + cpu +" "+ cpuManufacturer + ", GPU: " + gpu + ", RAM: " + ram + "GB, Storage: " + storage + " GB " + storageType + ", Weight: " + weight + "lb, Screen Size: " + screenSize +
+        return "HighEndLaptop: " + name + ", CPU: " + cpu +" "+ cpuManufacturer + ", GPU: " + gpu + ", RAM: " + ram + "GB, Storage: " + storage + " GB " + storageType + ", Weight: " + weight + "lb, Screen Size: " + screenSize +
                 ", Ports: " + ports + ", Geekbench Score: " + geekbenchScore + ", Price: $" + price + ", URL: " + url;
     }
 }

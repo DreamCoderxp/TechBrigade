@@ -3,17 +3,17 @@ package com.example;
 import java.io.*;
 import java.util.*;
 
-public class LaptopDatabase {
-    private List<Laptop> laptops;
+public class HighEndLaptopDatabase {
+    private List<HighEndLaptop> highEndLaptops;
 
-    public LaptopDatabase(String filename) throws FileNotFoundException {
-        laptops = new ArrayList<>();
+    public HighEndLaptopDatabase(String filename) throws FileNotFoundException {
+        highEndLaptops = new ArrayList<>();
         loadFromCSV(filename);
     }
 
     //This is the method that will be called from the controller
-    public List<Laptop> getLaptops() {
-        return laptops;
+    public List<HighEndLaptop> getLaptops() {
+        return highEndLaptops;
     }
 
     private void loadFromCSV(String filename) throws FileNotFoundException {
@@ -34,13 +34,13 @@ public class LaptopDatabase {
                     attributes[i] = attributes[i].replaceAll("^\"|\"$", "");
                 }
 
-                Laptop laptop = createLaptop(attributes);
-                laptops.add(laptop);
+                HighEndLaptop highEndLaptop = createLaptop(attributes);
+                highEndLaptops.add(highEndLaptop);
             }
         }
     }
 
-    private Laptop createLaptop(String[] metadata) {
+    private HighEndLaptop createLaptop(String[] metadata) {
         String name = metadata[0];
         String cpuManufacturer = metadata[1];
         String cpu = metadata[2];
@@ -55,10 +55,21 @@ public class LaptopDatabase {
         double price = Double.parseDouble(metadata[11]);
         String url = metadata[12];
 
-        return new Laptop(name, cpuManufacturer, cpu, gpu ,ram, storage, storageType, weight, screenSize, ports, geekbenchScore, price, url);
+        return new HighEndLaptop(name, cpuManufacturer, cpu, gpu ,ram, storage, storageType, weight, screenSize, ports, geekbenchScore, price, url);
     }
 
+
+
     // Filters methods here
+    public List<HighEndLaptop> filterLaptops(int minGeekbenchScore) {
+        List<HighEndLaptop> filteredLaptops = new ArrayList<>();
+        for (HighEndLaptop laptop : highEndLaptops) {
+            if (laptop.getGeekbenchScore() >= minGeekbenchScore) {
+                filteredLaptops.add(laptop);
+            }
+        }
+        return filteredLaptops;
+    }
 
 
 }
