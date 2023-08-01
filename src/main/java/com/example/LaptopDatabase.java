@@ -15,7 +15,7 @@ public class LaptopDatabase {
               ArrayList<Laptop> laptops = new ArrayList<Laptop>();
 
         try {
-            File fname= new File("laptopData.csv");
+            File fname= new File("src\\main\\java\\com\\example\\laptopData.csv");
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
@@ -25,7 +25,7 @@ public class LaptopDatabase {
             for(int i=0;i<laptopData.length;i++) {
                 laptopData[i] = laptopData[i].replaceAll("\"", "");
             }
-
+                //we will convert screensizes to double before comparing
                 if(laptopData[3].equals(ramString)&& laptopData[5].equals(cpu)&& laptopData[8].equals(screenSizeString)) {
                    
                     for(int i=0;i<laptopData.length;i++) {

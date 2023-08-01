@@ -30,7 +30,9 @@ public class SpecificationController {
 
     @FXML
     private ToggleGroup ram;
+    @FXML
     private ToggleGroup cpu;
+    @FXML
     private ToggleGroup sSize;
 
     @FXML
@@ -62,7 +64,7 @@ public class SpecificationController {
         LaptopDatabase speclaptopsDB = new LaptopDatabase();
         ArrayList<Laptop> filteredLaptops=  speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
 
-        System.out.println(filteredLaptops);
+        //System.out.println(filteredLaptops);
         for(Laptop laptop: filteredLaptops) {
             System.out.println(laptop.getName());
         }
@@ -106,12 +108,12 @@ public class SpecificationController {
 
         double screenSizeDouble = 0;
 
-        if (screenSizeValue.equals("(<12\")")) {
-            screenSizeDouble = 12.0;
+        if (screenSizeValue.equals("13.3\"")) {
+            screenSizeDouble = 13.3;
 
-        } else if (screenSizeValue.equals("(12.1\"- 14\")")) {
+        } else if (screenSizeValue.equals("14\"")) {
             screenSizeDouble = 14.0;
-        } else if (screenSizeValue.equals("(14.1\"-15.6\")")) {
+        } else if (screenSizeValue.equals("15.6\"")) {
             screenSizeDouble = 15.6;
         }
 
