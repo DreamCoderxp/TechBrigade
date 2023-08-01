@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 public class SpecificationController {
@@ -27,6 +28,11 @@ public class SpecificationController {
     private RadioButton screenBt2;
     private RadioButton screenBt3;
 
+    @FXML
+    private ToggleGroup ram;
+    private ToggleGroup cpu;
+    private ToggleGroup sSize;
+
 
 
     protected void initialize() {
@@ -38,7 +44,10 @@ public class SpecificationController {
         // TODO Auto-generated method stub
 
         //generate code for getting the selected values from radio button  toggle groups in the fxml file
+        RadioButton selectedRadioButton=  (RadioButton)ram.getSelectedToggle();
+        String ramValue = selectedRadioButton.getText();
         
+
 
         
     }   
