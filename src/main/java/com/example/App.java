@@ -25,8 +25,9 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         App.stage = stage;
-        scene = new Scene(loadFXML("SpecificationFilter"), 640, 480);
+        scene = new Scene(loadFXML("SpecificationFilter"));
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -47,22 +48,24 @@ public class App extends Application {
         return stage;
     }
 
-    @FXML
-    public void showSpecFilter() throws IOException {
-        // Parent root =
-        // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
+    // @FXML
+    // public void showSpecFilter() throws IOException {
+    //     // Parent root =
+    //     // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
+    //     FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
 
-        Parent root = loader.load();
-        SpecificationController controller = loader.getController();
-        // controller.setscene(scene);
+    //     Parent root = loader.load();
+    //     SpecificationController controller = loader.getController();
+    //     // controller.setscene(scene);
 
-        Stage stage = new Stage();
-        scene= new Scene(root,1500,1500);
-        stage.setTitle("Specification Filter");
-        stage.setScene(scene);
-       // stage.setResizable(true);
-        stage.show();
-    }
+    //     Stage stage = new Stage();
+    //     scene= new Scene(root);
+    //     stage.setTitle("Specification Filter");
+    //     stage.setScene(scene);
+    //    // stage.setResizable(true);
+    //     stage.show();
+    // }
+
+   
 }

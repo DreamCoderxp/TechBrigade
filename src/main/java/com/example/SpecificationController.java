@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
@@ -19,6 +20,9 @@ public class SpecificationController {
     private RadioButton ramBt1;
     private RadioButton ramBt2;
     private RadioButton ramBt3;
+
+    @FXML
+    private Label message; 
 
     @FXML
     private RadioButton cpuBt1;
@@ -74,7 +78,7 @@ public class SpecificationController {
         // generate code for showing the filtered laptops in a new window
         showSpecFilterApplied();
         
-
+        
 
     }
 
@@ -84,6 +88,7 @@ protected void showSpecFilterApplied() throws IOException {
         // If the filteredLaptops ArrayList is empty, just load and set the SpecificationFilter.fxml
         Parent root = FXMLLoader.load(getClass().getResource("SpecificationFilter.fxml"));
 
+        message.setText("No laptops found. Please try again.");
         Stage stage = App.getStage();
         stage.setTitle("Specification Filter");
         stage.setScene(new Scene(root));

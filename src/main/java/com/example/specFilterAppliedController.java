@@ -1,9 +1,15 @@
 package com.example;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class specFilterAppliedController {
     
@@ -16,7 +22,8 @@ public class specFilterAppliedController {
     @FXML
     private Label name111,cost111,ram111,storage111,processor111;
 
-    
+    @FXML
+    private Button back;
 
 
     protected void showLaptops(ArrayList<Laptop> laptops) {
@@ -95,9 +102,21 @@ public class specFilterAppliedController {
         }
     }
     
+    @FXML
+    protected void goBack() throws IOException {
+        System.out.println("GO BAck method called");
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
 
-    
-    
+        Parent root = loader.load();
+        //SpecificationController controller = loader.getController();
+        // controller.setscene(scene);
 
+        Stage stage = App.getStage();
+        //Scene scene= new Scene(root,1500,1500);
+        stage.setTitle("Specification Filter");
+        stage.setScene(new Scene(root));
+       // stage.setResizable(true);
+        stage.show();
 
+    }
 }
