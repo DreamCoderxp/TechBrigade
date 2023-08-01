@@ -6,10 +6,29 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
 public class SpecificationController {
     
+    @FXML
+    //create fields for all the radio button toggle groups in the fxml file
+    private RadioButton ramBt1;
+    private RadioButton ramBt2;
+    private RadioButton ramBt3;
+
+    @FXML
+    private RadioButton cpuBt1;
+    private RadioButton cpuBt2;
+    private RadioButton cpuBt3;
+
+    @FXML
+    private RadioButton screenBt1;
+    private RadioButton screenBt2;
+    private RadioButton screenBt3;
+
+
+
     protected void initialize() {
         // TODO Auto-generated method stub
         
