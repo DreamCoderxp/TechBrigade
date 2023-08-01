@@ -22,11 +22,11 @@ public class PortabilityController {
         // Register an event handler to handle choice selection
         portabilityChoiceBox.setOnAction(event -> handleChoiceSelection());
     }
-
+    //tst
     private void handleChoiceSelection() {
         // Handle the choice selection event here
         String selectedPortability = portabilityChoiceBox.getValue();
-            
+
 
         System.out.println("Selected Portability: " + selectedPortability);
 
