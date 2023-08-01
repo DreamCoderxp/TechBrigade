@@ -79,7 +79,6 @@ public class SpecificationController {
         showSpecFilterApplied();
         
 
-
     }
 
     @FXML
@@ -96,6 +95,7 @@ protected void showSpecFilterApplied() throws IOException {
         message.setText("No laptops found. Please try again.");
      //   stage.show();
     } else {
+
         // If filteredLaptops is not empty, proceed with showing the specFilterApplied.fxml
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecFilterApplied.fxml"));
         Parent root = loader.load();
@@ -106,7 +106,7 @@ protected void showSpecFilterApplied() throws IOException {
         stage.setTitle("Specification Filter Applied");
         stage.setScene(new Scene(root));
         stage.show();
-    }
+    }    
 }
 
 
@@ -123,7 +123,6 @@ protected void showSpecFilterApplied() throws IOException {
         } else if (ramValue.equals("32 GB")) {
             ramInt = 32;
         }
-
         return ramInt;
     }
 

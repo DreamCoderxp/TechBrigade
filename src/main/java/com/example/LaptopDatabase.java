@@ -1,5 +1,6 @@
 package com.example;
 
+
 import java.io.File;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -45,4 +46,42 @@ public class LaptopDatabase {
         }
         return laptops;
     }
+
+    protected ArrayList<Laptop> getPortableLaptops(int portability) {
+        String portabilityString = Integer.toString(portability);
+
+         ArrayList<Laptop> laptops = new ArrayList<Laptop>();
+        
+        try {
+            File fname= new File("src\\main\\java\\com\\example\\laptopData.csv");
+            Scanner input = new Scanner(fname);
+
+            while (input.hasNext()) {
+            //System.out.println(input.nextLine());
+            String[] laptopData = input.nextLine().split(",");
+
+            for(int i=0;i<laptopData.length;i++) {
+                laptopData[i] = laptopData[i].replaceAll("\"", "");
+            }
+                
+                if(laptopData[14].equals(portabilityString)) {
+                    
+
+                    ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                    for(int i=0;i<laptopData.length;i++) {
+                        laptopSpecs.add(laptopData[i]);
+                    }
+                    Laptop laptop = new Laptop(laptopSpecs);
+                    laptops.add(laptop);
+                }
+            }
+            input.close();
+            
+        } catch (Exception e) {
+            System.out.println("File not found");
+        }
+        return laptops;
+        
+}
 }
