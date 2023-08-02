@@ -55,7 +55,7 @@
                   <Label fx:id="weight111" prefHeight="18.0" prefWidth="372.0" text="Weight" />
                   <Label fx:id="screen111" prefHeight="18.0" prefWidth="368.0" text="Screen Size" />
                   <Label fx:id="processor111" prefHeight="18.0" prefWidth="409.0" text="Processor" />
-                  <Label fx:id="portability12" prefHeight="34.0" prefWidth="367.0" text="Portability Score" />
+                  <Label fx:id="portability111" prefHeight="34.0" prefWidth="367.0" text="Portability Score" />
                </children>
             </VBox>
          </children>

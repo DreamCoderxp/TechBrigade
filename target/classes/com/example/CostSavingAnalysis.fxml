@@ -1,10 +1,7 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -45,26 +42,18 @@
             <RowConstraints maxHeight="63.3999755859375" minHeight="10.0" prefHeight="63.3999755859375" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="60.400000000000006" minHeight="10.0" prefHeight="60.400000000000006" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="51.20000000000002" minHeight="8.400000000000006" prefHeight="51.20000000000002" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.20000000000002" minHeight="8.400000000000006" prefHeight="51.20000000000002" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="19.0" prefWidth="168.0" text="Lenovo Vostro 3620 Laptop" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label prefHeight="19.0" prefWidth="153.0" text="Lenovo Vostro 3620 Laptop" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
             <Label layoutX="235.0" layoutY="36.0" prefHeight="19.0" prefWidth="168.0" text="Apple Macbook Air M2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label layoutX="235.0" layoutY="114.0" prefHeight="19.0" prefWidth="168.0" text="HP Victus 15" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label layoutX="235.0" layoutY="114.0" prefHeight="19.0" prefWidth="168.0" text="Dell Lattitude" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Label layoutX="10.0" layoutY="186.0" prefHeight="19.0" prefWidth="168.0" text="Rog Zephyrus G14" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Label layoutX="463.0" layoutY="186.0" prefHeight="19.0" prefWidth="164.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <ButtonBar prefHeight="71.0" prefWidth="633.0" GridPane.columnIndex="1">
-              <buttons>
-                  <Button layoutX="458.0" layoutY="32.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Show Price Comparison" />
-              </buttons>
-            </ButtonBar>
           <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Show Price Comparison" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
             <Button layoutX="458.0" layoutY="110.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Show Price Comparison" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
             <Button layoutX="458.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Show Price Comparison" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <ImageView fitHeight="79.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../mv.png" />
-               </image>
-            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="bt1" alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Show Price Comparison" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
          </children>
       </GridPane>
    </children>
