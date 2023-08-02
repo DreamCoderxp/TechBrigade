@@ -27,7 +27,7 @@
             <Label />
             <Label GridPane.columnIndex="1" />
             <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="High End Laptop Recommendation" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#showHighEndLaptopRecommendations" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="High End Laptop Recommendation" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font></Button>
@@ -36,17 +36,17 @@
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="ProgramTailored" textFill="#1e1c1c" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#showProgramTailored" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Program Tailored Recommendation" textFill="#1e1c1c" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#showComparison" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Comparison" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#showComparison" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Laptop Comparison" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#showSpecFilter" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="SpecificationFilter" textFill="#1e1c1c" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#showSpecFilter" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Specification Filter" textFill="#1e1c1c" GridPane.rowIndex="2">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>

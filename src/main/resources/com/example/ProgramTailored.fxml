@@ -28,7 +28,7 @@
                   <Font name="Bodoni MT Black" size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="31.0" prefWidth="520.0" text="Get program Tailored Recommendations!" GridPane.rowIndex="1">
+            <Label prefHeight="31.0" prefWidth="520.0" text="Get Program Tailored Recommendations!" GridPane.rowIndex="1">
                <font>
                   <Font size="21.0" />
                </font>
@@ -47,7 +47,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <RadioButton fx:id="RadioBt1" mnemonicParsing="false" text="Computer Programming ">
+            <RadioButton fx:id="RadioBt1" mnemonicParsing="false" text="Applied Science and Technology">
                <font>
                   <Font size="18.0" />
                </font>
@@ -55,22 +55,22 @@
                   <ToggleGroup fx:id="programGrp" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="RadioBt2" mnemonicParsing="false" text="Computer Systems Technology " toggleGroup="$programGrp" GridPane.rowIndex="1">
+            <RadioButton fx:id="RadioBt2" mnemonicParsing="false" text="Humanities and Social Sciences" toggleGroup="$programGrp" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="RadioBt3" mnemonicParsing="false" text="Honours Bachelor of Computer Science" toggleGroup="$programGrp" GridPane.rowIndex="2">
+            <RadioButton fx:id="RadioBt3" mnemonicParsing="false" text="Health and Community Studies" toggleGroup="$programGrp" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="RadioBt4" mnemonicParsing="false" text="Honours Bachelor of Information Sciences" toggleGroup="$programGrp" GridPane.rowIndex="3">
+            <RadioButton fx:id="RadioBt4" mnemonicParsing="false" text="Animation Arts and Design" toggleGroup="$programGrp" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="RadioBt5" mnemonicParsing="false" text="Internet Communications Technology" toggleGroup="$programGrp" GridPane.rowIndex="4">
+            <RadioButton fx:id="RadioBt5" mnemonicParsing="false" text="Pilon School of Business" toggleGroup="$programGrp" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
@@ -82,6 +82,6 @@
             <Image url="@../../../../../../../../Pictures/Screenshots/92503565.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="166.0" layoutY="601.0" mnemonicParsing="false" onAction="#chooseProgramBt" prefHeight="35.0" prefWidth="174.0" text="Choose Program" />
+      <Button layoutX="166.0" layoutY="601.0" mnemonicParsing="false" onAction="#applyProgramFilter" prefHeight="35.0" prefWidth="174.0" text="Choose Program" />
    </children>
 </AnchorPane>

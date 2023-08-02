@@ -7,6 +7,8 @@ public class Laptop {
     private String name;
     private String brand;
     private String processor;
+    private String screenInfo;
+    private String link;
     private int ram;
     private int storage;
     private double cost;
@@ -23,6 +25,21 @@ public class Laptop {
     private int warranty;
     private double review;
     private double lifespan;
+    public String getScreenInfo() {
+        return screenInfo;
+    }
+
+    public void setScreenInfo(String screenInfo) {
+        this.screenInfo = screenInfo;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
     public String getUrl() {
         return url;
     }
@@ -32,6 +49,22 @@ public class Laptop {
     }
 
     private String url;
+
+    public Laptop(String name, String brand, String processor, String os, int ram, int storage, String url, double weight, String screenInfo, String copyType, int benchmark, double cost, String link) {
+        this.name = name;
+        this.brand = brand;
+        this.processor = processor;
+        this.os = os;
+        this.ram = ram;
+        this.storage = storage;
+        this.url = url;
+        this.weight = weight;
+        this.screenInfo = screenInfo;
+        this.cpuType = copyType;
+        this.benchmark = benchmark;
+        this.cost = cost;
+        this.link = link;
+    }
 
 
     public Laptop(ArrayList<String> laptopSpecs) {

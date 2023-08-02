@@ -9,9 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class specFilterAppliedController {
+public class PFilterAppliedController {
     
     @FXML
     private Label name1,cost1,ram1,storage1,processor1;
@@ -21,6 +23,9 @@ public class specFilterAppliedController {
 
     @FXML
     private Label name111,cost111,ram111,storage111,processor111;
+
+    @FXML
+    private ImageView img1,img11,img111;
 
     @FXML
     private Button back;
@@ -33,7 +38,8 @@ public class specFilterAppliedController {
             ram1.setText(Integer.toString(laptops.get(0).getRam()));
             storage1.setText(Integer.toString(laptops.get(0).getStorage()));
             processor1.setText(laptops.get(0).getProcessor());
-
+            img1.setImage(new Image(laptops.get(0).getUrl()));
+            
         } else {
             name1.setText("");
             cost1.setText("");
@@ -46,6 +52,7 @@ public class specFilterAppliedController {
             name11.setText(laptops.get(1).getName());
             if (cost11 != null) {
                 cost11.setText(Double.toString(laptops.get(1).getCost()));
+                
             }
             if (ram11 != null) {
                 ram11.setText(Integer.toString(laptops.get(1).getRam()));
@@ -56,6 +63,8 @@ public class specFilterAppliedController {
             if (processor11 != null) {
                 processor11.setText(laptops.get(1).getProcessor());
             }
+            img11.setImage(new Image(laptops.get(1).getUrl()));
+
         } else {
             name11.setText("");
             if (cost11 != null) {
@@ -86,6 +95,8 @@ public class specFilterAppliedController {
             if (processor111 != null) {
                 processor111.setText(laptops.get(2).getProcessor());
             }
+            img111.setImage(new Image(laptops.get(2).getUrl()));
+
         } else {
             name111.setText("");
             if (cost111 != null) {
@@ -103,11 +114,10 @@ public class specFilterAppliedController {
         }
     }
     
-    
     @FXML
     protected void goBack() throws IOException {
-        System.out.println("GO BAck method called");
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
+        System.out.println("GO Back method called");
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
 
         Parent root = loader.load();
         //SpecificationController controller = loader.getController();
@@ -115,7 +125,7 @@ public class specFilterAppliedController {
 
         Stage stage = App.getStage();
         //Scene scene= new Scene(root,1500,1500);
-        stage.setTitle("Specification Filter");
+        stage.setTitle("Program Filter");
         stage.setScene(new Scene(root));
        // stage.setResizable(true);
         stage.show();

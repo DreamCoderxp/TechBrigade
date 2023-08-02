@@ -92,19 +92,31 @@ public class App extends Application {
         stage.show();
     }
 
-    // @FXML
-    // protected void showHighEndLaptopRecommendations() throws IOException {
-    //     FXMLLoader loader = new FXMLLoader(getClass().getResource("HighEndLaptopRecommendations.fxml"));
-    //     Parent root = loader.load();
-    //     //HighEndLaptopRecommendationsController controller = loader.getController();
-    //     // controller.setscene(scene);
+    @FXML
+    protected void showHighEndLaptopRecommendations() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("HighEndLaptopRecommendations.fxml"));
+        Parent root = loader.load();
+        //HighEndLaptopRecommendationsController controller = loader.getController();
+        // controller.setscene(scene);
 
-    //     Stage stage = App.getStage();
-    //     stage.setTitle("High End Laptop Recommendations");
-    //     stage.setScene(new Scene(root));
-    //     stage.show();
-    // }
+        Stage stage = App.getStage();
+        stage.setTitle("High End Laptop Recommendations");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 
+    @FXML
+    protected void showProgramTailored() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
+        Parent root = loader.load();
+        //ProgramTailoredController controller = loader.getController();
+        // controller.setscene(scene);
+
+        Stage stage = App.getStage();
+        stage.setTitle("Program Tailored");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 
 
     @FXML
@@ -139,5 +151,5 @@ public class App extends Application {
         stage.setScene(new Scene(root));
         stage.show();
     }
-       
+
 }
