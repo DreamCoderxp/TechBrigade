@@ -38,7 +38,15 @@ public class PortabilityController {
     //     processorLabels = new Label[]{processor1, processor11, processor111};
     //     portabilityLabels = new Label[]{portability1, portability11, portability111};
 
-   
+    //test1
+    //t2
+    //t2
+    //t2
+    //t2
+    //t2
+    //t2
+    //t2
+        
 
     @FXML
     public void initialize() {
