@@ -55,75 +55,10 @@ public class PortabilityController {
 
         // Set the default value (optional)
         portabilityChoiceBox.setValue("High Portability");
-
-        
-
-
-
-        //handleChoiceSelection();
-
-
-
-        // Register an event handler to handle choice selection
+      // Register an event handler to handle choice selection
         portabilityChoiceBox.setOnAction(event -> handleChoiceSelection());
-
-         
-        // LaptopDatabase portableLaptopsDB = new LaptopDatabase();
-        //   filteredLaptops =portableLaptopsDB.getPortableLaptops(portabilityScore);
-
-        // showLaptops(filteredLaptops);
-        
-
-
-    }
-
+   }
    
-    
-    
-//     protected void showLaptops(ArrayList<Laptop> laptops) {      
-//         System.out.println("showLaptops called");
-//         System.out.println(laptops.size());
-
-
-//         int numLaptops = Math.min(laptops.size(), 3);
-
-        
-//         for (int i = 0; i < 3; i++) {
-
-//             if (nameLabels[i] == null) {
-//                 System.out.println("nameLabels[i] is null");
-//                 if (i < numLaptops) {
-//                     System.out.println("i < numLaptops entered");
-//                     System.out.println(nameLabels[i].getText());
-//                     Laptop laptop = laptops.get(i);
-//                     nameLabels[i].setText(laptop.getName());
-
-//                     System.out.println(nameLabels[i].getText()+"______________-------------");
-//                     costLabels[i].setText(Double.toString(laptop.getCost()));
-//                     weightLabels[i].setText(Double.toString(laptop.getWeight()));
-//                    // ramLabels[i].setText(Integer.toString(laptop.getRam()));
-//                     screenLabels[i].setText(Double.toString(laptop.getScreenSize()));
-//                     //storageLabels[i].setText(Integer.toString(laptop.getStorage()));
-//                     processorLabels[i].setText(laptop.getProcessor());
-//                     portabilityLabels[i].setText(Integer.toString(laptop.getPortability()));
-                    
-//                 } else {
-//                     nameLabels[i].setText("");
-//                      System.out.println(nameLabels[i].getText());
-//                     costLabels[i].setText("");
-//                     weightLabels[i].setText("");
-//                     screenLabels[i].setText("");
-//                     processorLabels[i].setText("");
-//                     portabilityLabels[i].setText("");
-//                 }
-//             }
-//         }
-//     }
-    
-// //}
-
-
-    
     protected void showLaptops(ArrayList<Laptop> laptops) {
         int numLaptops = Math.min(laptops.size(), 3);
         System.out.println(laptops.size());

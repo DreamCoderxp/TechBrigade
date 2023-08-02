@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PortabilityController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.LifespanEstimationController">
    <children>
    
       <GridPane alignment="TOP_CENTER" layoutX="99.0" layoutY="23.0" prefHeight="91.0" prefWidth="362.0">
@@ -36,16 +36,16 @@
       </GridPane>
       
       
-      <TableView layoutX="47.0" layoutY="170.0" prefHeight="200.0" prefWidth="798.0">
+      <TableView fx:id="laptopTable" layoutX="47.0" layoutY="170.0" prefHeight="200.0" prefWidth="798.0">
         <columns>
             <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Laptop Name" />
-          <TableColumn fx:id="batteryColumn" prefWidth="150.0" text="Battery Life" />
-            <TableColumn fx:id="lifespanColumn" prefWidth="150.0" text="Average LifeSpan" />
-            <TableColumn fx:id="costColumn" prefWidth="130.0" text="Cost" />
-            <TableColumn fx:id="warrantyColumn" prefWidth="120.0" text="Warranty" />
+          <TableColumn fx:id="batteryColumn" prefWidth="150.0" text="Battery Life (Hours)" />
+            <TableColumn fx:id="lifespanColumn" prefWidth="150.0" text="Average LifeSpan (Years)" />
+            <TableColumn fx:id="costColumn" prefWidth="130.0" text="Cost ($)" />
+            <TableColumn fx:id="warrantyColumn" prefWidth="150.0" text="Warranty (Months)" />
         </columns>
       </TableView>
-      <ComboBox fx:id="brandComboBox" layoutX="53.0" layoutY="127.0" prefHeight="26.0" prefWidth="521.0" />
+      <ComboBox fx:id="brandComboBox" layoutX="53.0" layoutY="127.0" prefHeight="26.0" prefWidth="521.0" promptText="Select a Brand to view thier Laptop Longevity" />
      
    </children>
 </AnchorPane>
