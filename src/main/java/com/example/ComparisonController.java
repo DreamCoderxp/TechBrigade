@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class ComparisonController {
@@ -25,6 +27,9 @@ public class ComparisonController {
     @FXML
     private Label name11,cost11,weight11,processor11,screen11,os11,storage11,ram11,battery11;
 
+    @FXML
+    private ImageView img1, img11;
+    
     @FXML
     private Button compareBt;
     
@@ -75,6 +80,7 @@ public class ComparisonController {
                 storage1.setText(Integer.toString(laptops.get(i).getStorage()));
                 ram1.setText(Integer.toString(laptops.get(i).getRam()));
                 battery1.setText(Double.toString(laptops.get(i).getBatteryLife()));
+                img1.setImage(new Image(laptops.get(i).getUrl()));
             } 
             
             if (i==1) {
@@ -87,9 +93,9 @@ public class ComparisonController {
                 storage11.setText(Integer.toString(laptops.get(i).getStorage()));
                 ram11.setText(Integer.toString(laptops.get(i).getRam()));
                 battery11.setText(Double.toString(laptops.get(i).getBatteryLife()));
+                img11.setImage(new Image(laptops.get(i).getUrl()));
             }
         }
-
 
     }
 

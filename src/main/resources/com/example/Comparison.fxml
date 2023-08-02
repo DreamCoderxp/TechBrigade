@@ -62,7 +62,7 @@
                            <children>
                               <HBox prefHeight="150.0" prefWidth="373.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="img1" fitHeight="150.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
                               <VBox prefHeight="282.0" prefWidth="394.0">
@@ -95,7 +95,7 @@
                            <children>
                               <HBox prefHeight="150.0" prefWidth="373.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="img11" fitHeight="150.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
                               <VBox prefHeight="280.0" prefWidth="380.0">
