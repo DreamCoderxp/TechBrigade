@@ -77,5 +77,6 @@
             <Button fx:id="touchscreenBt" mnemonicParsing="false" prefHeight="26.0" prefWidth="339.0" text="Browse Touchscreen Laptops" GridPane.rowIndex="2" />
          </children>
       </GridPane>
+      <Button layoutX="673.0" layoutY="10.0" mnemonicParsing="false" onAction="#goHome" prefHeight="26.0" prefWidth="234.0" text="Home" />
    </children>
 </AnchorPane>

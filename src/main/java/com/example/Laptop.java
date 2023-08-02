@@ -23,9 +23,11 @@ public class Laptop {
     private int warranty;
     private double review;
     private double lifespan;
+    private String url;
 
 
     public Laptop(ArrayList<String> laptopSpecs) {
+        this.url= LaptopDatabase.getLaptopUrl(Integer.parseInt(laptopSpecs.get(0)));
         this.id = Integer.parseInt(laptopSpecs.get(0));
         this.name = laptopSpecs.get(1);
         this.cost = Double.parseDouble(laptopSpecs.get(2));    

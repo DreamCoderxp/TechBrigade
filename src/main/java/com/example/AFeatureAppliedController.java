@@ -71,5 +71,7 @@ public class AFeatureAppliedController {
         stage.show();
 
     }
+
+    
     
 }

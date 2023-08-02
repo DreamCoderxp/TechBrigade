@@ -106,4 +106,14 @@ public class AdditionalFeatureController {
 
 
     }
+
+    @FXML
+    protected void goHome() throws IOException {
+        // TODO Auto-generated method stub
+        Stage stage = App.getStage();
+        Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

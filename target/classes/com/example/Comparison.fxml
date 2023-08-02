@@ -123,5 +123,6 @@
         </items>
       </SplitPane>
       <Button fx:id="compareBt" layoutX="407.0" layoutY="210.0" mnemonicParsing="false" text="Compare Laptops" />
+      <Button layoutX="641.0" layoutY="21.0" mnemonicParsing="false" onAction="#goHome" prefHeight="26.0" prefWidth="238.0" text="Home" />
    </children>
 </AnchorPane>
