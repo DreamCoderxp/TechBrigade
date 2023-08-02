@@ -56,69 +56,67 @@ public class PortabilityController {
         portabilityChoiceBox.setOnAction(event -> handleChoiceSelection());
    }
    
-    protected void showLaptops(ArrayList<Laptop> laptops) {
+   protected void showLaptops(ArrayList<Laptop> laptops) {
+    int numLaptops = Math.min(laptops.size(), 3);
+    System.out.println(laptops.size());
 
-        int numLaptops = Math.min(laptops.size(), 3);
-        System.out.println(laptops.size());
-        if (numLaptops >= 1) {
-            Laptop laptop1 = laptops.get(0);
-            name1.setText(laptop1.getName());
-            cost1.setText(Double.toString(laptop1.getCost()));
-            weight1.setText(Double.toString(laptop1.getWeight()));
-            screen1.setText(Double.toString(laptop1.getScreenSize()));
-            processor1.setText(laptop1.getProcessor());
-            portability1.setText(Integer.toString(laptop1.getPortability()));
-           
-            img1.setImage(new Image(laptop1.getUrl()));
-        } else {
-            // Reset fields to blank if no laptop data
-            name1.setText("");
-            cost1.setText("");
-            weight1.setText("");
-            screen1.setText("");
-            processor1.setText("");
-            portability1.setText("");
-        }
-    
-        if (numLaptops >= 2) {
-            Laptop laptop2 = laptops.get(1);
-            name11.setText(laptop2.getName());
-            cost11.setText(Double.toString(laptop2.getCost()));
-            weight11.setText(Double.toString(laptop2.getWeight()));
-            screen11.setText(Double.toString(laptop2.getScreenSize()));
-            processor11.setText(laptop2.getProcessor());
-            portability11.setText(Integer.toString(laptop2.getPortability()));
-            img11.setImage(new Image(laptop2.getUrl()));
-        } else {
-            // Reset fields to blank if no laptop data
-            name11.setText("");
-            cost11.setText("");
-            weight11.setText("");
-            screen11.setText("");
-            processor11.setText("");
-            portability11.setText("");
-        }
-    
-        if (numLaptops >= 3) {
-            Laptop laptop3 = laptops.get(2);
-            name111.setText(laptop3.getName());
-            cost111.setText(Double.toString(laptop3.getCost()));
-            weight111.setText(Double.toString(laptop3.getWeight()));
-            screen111.setText(Double.toString(laptop3.getScreenSize()));
-            processor111.setText(laptop3.getProcessor());
-            portability111.setText(Integer.toString(laptop3.getPortability()));
-            img111.setImage(new Image(laptop3.getUrl()));
-        } else {
-            // Reset fields to blank if no laptop data
-            name111.setText("");
-            cost111.setText("");
-            weight111.setText("");
-            screen111.setText("");
-            processor111.setText("");
-            portability111.setText("");
-            
-        }
+    if (numLaptops >= 1) {
+        Laptop laptop1 = laptops.get(0);
+        name1.setText("Name: " + laptop1.getName());
+        cost1.setText("Cost: " + Double.toString(laptop1.getCost()));
+        weight1.setText("Weight: " + Double.toString(laptop1.getWeight()));
+        screen1.setText("Screen Size: " + Double.toString(laptop1.getScreenSize()));
+        processor1.setText("Processor: " + laptop1.getProcessor());
+        portability1.setText("Portability: " + Integer.toString(laptop1.getPortability()));
+        img1.setImage(new Image(laptop1.getUrl()));
+    } else {
+        // Reset fields to blank if no laptop data
+        name1.setText("");
+        cost1.setText("");
+        weight1.setText("");
+        screen1.setText("");
+        processor1.setText("");
+        portability1.setText("");
     }
+
+    if (numLaptops >= 2) {
+        Laptop laptop2 = laptops.get(1);
+        name11.setText("Name: " + laptop2.getName());
+        cost11.setText("Cost: " + Double.toString(laptop2.getCost()));
+        weight11.setText("Weight: " + Double.toString(laptop2.getWeight()));
+        screen11.setText("Screen Size: " + Double.toString(laptop2.getScreenSize()));
+        processor11.setText("Processor: " + laptop2.getProcessor());
+        portability11.setText("Portability: " + Integer.toString(laptop2.getPortability()));
+        img11.setImage(new Image(laptop2.getUrl()));
+    } else {
+        // Reset fields to blank if no laptop data
+        name11.setText("");
+        cost11.setText("");
+        weight11.setText("");
+        screen11.setText("");
+        processor11.setText("");
+        portability11.setText("");
+    }
+
+    if (numLaptops >= 3) {
+        Laptop laptop3 = laptops.get(2);
+        name111.setText("Name: " + laptop3.getName());
+        cost111.setText("Cost: " + Double.toString(laptop3.getCost()));
+        weight111.setText("Weight: " + Double.toString(laptop3.getWeight()));
+        screen111.setText("Screen Size: " + Double.toString(laptop3.getScreenSize()));
+        processor111.setText("Processor: " + laptop3.getProcessor());
+        portability111.setText("Portability: " + Integer.toString(laptop3.getPortability()));
+        img111.setImage(new Image(laptop3.getUrl()));
+    } else {
+        // Reset fields to blank if no laptop data
+        name111.setText("");
+        cost111.setText("");
+        weight111.setText("");
+        screen111.setText("");
+        processor111.setText("");
+        portability111.setText("");
+    }
+}
 
 
 
