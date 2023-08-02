@@ -55,7 +55,7 @@ public class SpecificationController {
         // in the fxml file
         RadioButton selectedRamButton = (RadioButton) ram.getSelectedToggle();
         String ramValue = selectedRamButton.getText();
-       // System.out.println(ramValue);
+        System.out.println(ramValue);
 
         RadioButton selectedCpuButton = (RadioButton) cpu.getSelectedToggle();
         String cpuValue = selectedCpuButton.getText();

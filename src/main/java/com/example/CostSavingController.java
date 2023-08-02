@@ -36,7 +36,7 @@ public class CostSavingController {
         costComboBox.getItems().addAll("Basic Tasks","Office Work", "Gaming");
         
         // Set the default value (optional)
-        costComboBox.setValue("Basic Tasks");
+       // costComboBox.setValue("Basic Tasks");
 
         
         // Register an event handler to handle choice selection

@@ -82,7 +82,7 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <ComboBox fx:id="costComboBox" layoutX="51.0" layoutY="193.0" prefHeight="26.0" prefWidth="420.0" />
+      <ComboBox fx:id="costComboBox" layoutX="51.0" layoutY="193.0" prefHeight="26.0" prefWidth="420.0" promptText="Choose a Laptop based on your Requirement" />
       <Button layoutX="645.0" layoutY="39.0" mnemonicParsing="false" onAction="#goHome" prefHeight="26.0" prefWidth="238.0" text="Home" />
    </children>
 </AnchorPane>
