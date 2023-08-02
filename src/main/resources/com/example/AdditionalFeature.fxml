@@ -2,16 +2,18 @@
 
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.AdditionalFeatureController">
    <children>
       <GridPane layoutX="1.0" layoutY="17.0" prefHeight="138.0" prefWidth="746.0">
         <columnConstraints>
@@ -27,14 +29,14 @@
                   <Font name="Bodoni MT Black" size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1122.0" text="Choose Additional feature" GridPane.rowIndex="1">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1122.0" text="Browse Innovative Features" GridPane.rowIndex="1">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
          </children>
       </GridPane>
-      <GridPane layoutX="30.0" layoutY="194.0" prefHeight="338.0" prefWidth="617.0" vgap="10.0">
+      <GridPane layoutX="30.0" layoutY="194.0" prefHeight="223.0" prefWidth="618.0" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="422.8" minWidth="10.0" prefWidth="401.2000244140625" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="216.3999755859375" />
@@ -42,38 +44,21 @@
         <rowConstraints>
             <RowConstraints maxHeight="70.60001220703126" minHeight="10.0" prefHeight="70.60001220703126" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="63.3999755859375" minHeight="10.0" prefHeight="63.3999755859375" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="60.400000000000006" minHeight="10.0" prefHeight="60.400000000000006" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="51.20000000000002" minHeight="8.400000000000006" prefHeight="51.20000000000002" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="350.0" text="Backlit Keyboard" textAlignment="CENTER">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="354.0" text="2 in 1 Laptops " GridPane.rowIndex="1">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="355.0" text="ThunderBolt C ports" GridPane.rowIndex="2">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="18.0" prefWidth="368.0" text="FingerPrint Reader" GridPane.rowIndex="3">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <ImageView accessibleRole="BUTTON" fitHeight="78.0" fitWidth="126.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-               <image>
-                  <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-14%20142536.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </ImageView>
+            <Pane GridPane.columnIndex="1">
+               <children>
+                  <ImageView accessibleRole="BUTTON" fitHeight="78.0" fitWidth="88.0" layoutX="126.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-14%20142536.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
             <ImageView accessibleRole="BUTTON" fitHeight="70.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-14%20142536.png" />
@@ -82,16 +67,14 @@
                   <Rectangle2D />
                </viewport>
             </ImageView>
-            <ImageView fitHeight="67.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fitHeight="68.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-14%20142536.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="68.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../../../../../../Pictures/Screenshots/Screenshot%202023-05-14%20142536.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="backlitBt" mnemonicParsing="false" prefHeight="26.0" prefWidth="339.0" text="Browse Backlit Keyboards" />
+            <Button fx:id="twoInOneBt" layoutX="10.0" layoutY="32.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="339.0" text="Browse 2 in 1 Laptops " GridPane.rowIndex="1" />
+            <Button fx:id="touchscreenBt" mnemonicParsing="false" prefHeight="26.0" prefWidth="339.0" text="Browse Touchscreen Laptops" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

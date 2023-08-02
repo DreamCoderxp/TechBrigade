@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.App">
    <children>
       <VBox layoutX="289.0" layoutY="45.0" prefHeight="97.0" prefWidth="274.0">
          <children>
@@ -40,14 +39,14 @@
             <Label />
             <Label GridPane.columnIndex="1" />
             <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="AdditionalFeature" />
+            <Button mnemonicParsing="false" onAction="#showAdditionalFeature" text="AdditionalFeature" />
             <Button mnemonicParsing="false" text="ProgramTailored" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="SpecificationFilter" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Portability" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#showSpecFilter" text="SpecificationFilter" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#showPortability" text="Portability" GridPane.rowIndex="3" />
             <Button mnemonicParsing="false" text="HighEndLaptop Recommendation" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="Cost Analysis" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Upgradability " GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="Comparison" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#showCostSavingAnalysis" text="Cost Analysis" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#showLifespanEstimation" text="Lifespan Estimation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#showComparison" text="Comparison" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

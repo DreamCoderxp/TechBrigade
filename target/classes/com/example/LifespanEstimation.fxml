@@ -36,7 +36,7 @@
       </GridPane>
       
       
-      <TableView fx:id="laptopTable" layoutX="47.0" layoutY="170.0" prefHeight="200.0" prefWidth="798.0">
+      <TableView fx:id="laptopTable" layoutX="47.0" layoutY="170.0" prefHeight="279.0" prefWidth="798.0">
         <columns>
             <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Laptop Name" />
           <TableColumn fx:id="batteryColumn" prefWidth="150.0" text="Battery Life (Hours)" />

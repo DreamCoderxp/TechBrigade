@@ -25,7 +25,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         App.stage = stage;
-        scene = new Scene(loadFXML("Comparison"));
+        scene = new Scene(loadFXML("front"));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -48,24 +48,100 @@ public class App extends Application {
         return stage;
     }
 
+    @FXML
+    public void showSpecFilter() throws IOException {
+        // Parent root =
+        // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
+
+        Parent root = loader.load();
+        SpecificationController controller = loader.getController();
+        // controller.setscene(scene);
+
+        Stage stage = new Stage();
+        scene= new Scene(root);
+        stage.setTitle("Specification Filter");
+        stage.setScene(scene);
+       // stage.setResizable(true);
+        stage.show();
+    }
+
+    @FXML
+    protected void showAdditionalFeature() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AdditionalFeature.fxml"));
+        Parent root = loader.load();
+        
+        Stage stage = App.getStage();
+        stage.setTitle("Innovative Features");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+    @FXML
+    protected void showPortability() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Portability.fxml"));
+        Parent root = loader.load();
+        PortabilityController controller = loader.getController();
+        // controller.setscene(scene);
+
+        Stage stage = App.getStage();
+        stage.setTitle("Portability");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     // @FXML
-    // public void showSpecFilter() throws IOException {
-    //     // Parent root =
-    //     // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
-
-    //     FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
-
+    // protected void showHighEndLaptopRecommendations() throws IOException {
+    //     FXMLLoader loader = new FXMLLoader(getClass().getResource("HighEndLaptopRecommendations.fxml"));
     //     Parent root = loader.load();
-    //     SpecificationController controller = loader.getController();
+    //     //HighEndLaptopRecommendationsController controller = loader.getController();
     //     // controller.setscene(scene);
 
-    //     Stage stage = new Stage();
-    //     scene= new Scene(root);
-    //     stage.setTitle("Specification Filter");
-    //     stage.setScene(scene);
-    //    // stage.setResizable(true);
+    //     Stage stage = App.getStage();
+    //     stage.setTitle("High End Laptop Recommendations");
+    //     stage.setScene(new Scene(root));
     //     stage.show();
     // }
+
+
+
+    @FXML
+    protected void showCostSavingAnalysis() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CostSavingAnalysis.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = App.getStage();
+        stage.setTitle("Cost Saving Analysis");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    protected void showLifespanEstimation() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LifespanEstimation.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = App.getStage();
+        stage.setTitle("Lifespan Estimation");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    protected void showComparison() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Comparison.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = App.getStage();
+        stage.setTitle("Comparison");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+
+
 
    
 }

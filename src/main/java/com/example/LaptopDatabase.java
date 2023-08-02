@@ -210,4 +210,98 @@ public class LaptopDatabase {
         }
         return laptops;
     }
+
+    protected ArrayList<Laptop> getAdditionalFeatLaptops(int signal)  {
+        ArrayList<Laptop> laptops = new ArrayList<Laptop>();
+
+        System.out.println("Signal: "+signal);
+        Laptop laptop=null;
+
+        try {
+            File fname= new File("src\\main\\java\\com\\example\\laptopData.csv");
+            Scanner input = new Scanner(fname);
+
+            while (input.hasNext()) {
+            //System.out.println(input.nextLine());
+            String[] laptopData = input.nextLine().split(",");
+
+            for(int i=0;i<laptopData.length;i++) {
+                laptopData[i] = laptopData[i].replaceAll("\"", "");
+            }
+                
+                if (signal==1 && laptopData[11].equals("True")) {
+                    //if (laptopData[11].equals("TRUE")) {
+                        //System.out.println("True found here ");
+                        ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                        for(int i=0;i<laptopData.length;i++) {
+                            laptopSpecs.add(laptopData[i]);
+                        }
+
+                        // //print the laptopSpecs
+                        // for(int i=0;i<laptopSpecs.size();i++) {
+                        //     System.out.println(laptopSpecs.get(i));
+                        // }
+                        laptop = new Laptop(laptopSpecs);
+                        laptops.add(laptop);
+                    }
+                        else if (signal==2 && laptopData[12].equals("True")) {
+                   // if (laptopData[12].equals("TRUE")) {
+                        ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                        for(int i=0;i<laptopData.length;i++) {
+                            laptopSpecs.add(laptopData[i]);
+                        }
+
+                        // //print the laptopSpecs
+                        // for(int i=0;i<laptopSpecs.size();i++) {
+                        //     System.out.println(laptopSpecs.get(i));
+                        // }
+                        laptop = new Laptop(laptopSpecs);
+                        laptops.add(laptop);
+                    //}
+                } else if (signal==3 && laptopData[13].equals("True")) {
+                    //if (laptopData[13].equals("TRUE")) {
+                        ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                        for(int i=0;i<laptopData.length;i++) {
+                            laptopSpecs.add(laptopData[i]);
+                        }
+
+                        // //print the laptopSpecs
+                        // for(int i=0;i<laptopSpecs.size();i++) {
+                        //     System.out.println(laptopSpecs.get(i));
+                        // }
+                        laptop = new Laptop(laptopSpecs);
+                        laptops.add(laptop);
+                    //}
+
+                }
+                // if(laptopData[12].equals("TRUE")&&laptopData[13].equals("TRUE")) {
+                    
+                //     ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                //     for(int i=0;i<laptopData.length;i++) {
+                //         laptopSpecs.add(laptopData[i]);
+                //     }
+
+                //     // //print the laptopSpecs
+                //     // for(int i=0;i<laptopSpecs.size();i++) {
+                //     //     System.out.println(laptopSpecs.get(i));
+                //     // }
+                //     Laptop laptop = new Laptop(laptopSpecs);
+                //     laptops.add(laptop);
+                // }
+            }
+            input.close();
+            
+        } catch (Exception e) {
+            System.out.println("File not found");
+        }
+
+        System.out.println(laptops.size()+ " laptops found");
+        return laptops;
+
+
+    }
 }
