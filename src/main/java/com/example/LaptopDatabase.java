@@ -35,8 +35,10 @@ public class LaptopDatabase {
                     for(int i=0;i<laptopData.length;i++) {
                         laptopSpecs.add(laptopData[i]);
                     }
+                    
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
+
                 }
             }
             input.close();
@@ -72,6 +74,11 @@ public class LaptopDatabase {
                     for(int i=0;i<laptopData.length;i++) {
                         laptopSpecs.add(laptopData[i]);
                     }
+
+                    // //print the laptopSpecs
+                    // for(int i=0;i<laptopSpecs.size();i++) {
+                    //     System.out.println(laptopSpecs.get(i));
+                    // }
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
                 }
