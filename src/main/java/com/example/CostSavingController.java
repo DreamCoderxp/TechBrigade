@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class CostSavingController {
@@ -20,6 +22,9 @@ public class CostSavingController {
     @FXML
     Label name111,warranty111,review111,cost111,benchmark111;
 
+    @FXML
+    private ImageView img1, img11, img111;
+    
     ArrayList<Laptop> filteredLaptops;
 
     @FXML
@@ -68,16 +73,17 @@ public class CostSavingController {
     }
 
 
-    protected void showLaptops(ArrayList<Laptop> laptops){
+    protected void showLaptops(ArrayList<Laptop> laptops) {
         int numLaptops = Math.min(laptops.size(), 3);
         System.out.println(laptops.size());
         if (numLaptops >= 1) {
             Laptop laptop1 = laptops.get(0);
-            name1.setText(laptop1.getName());
-            cost1.setText(Double.toString(laptop1.getCost()));
-            warranty1.setText(Double.toString(laptop1.getWarranty()));
-            review1.setText(Double.toString(laptop1.getReview()));
-            benchmark1.setText(Double.toString(laptop1.getBenchmark()));
+            name1.setText("Name: " + laptop1.getName());
+            cost1.setText("Cost: $" + Double.toString(laptop1.getCost()));
+            warranty1.setText("Warranty: " + Double.toString(laptop1.getWarranty()) + " years");
+            review1.setText("Review: " + Double.toString(laptop1.getReview()) + "/5");
+            benchmark1.setText("Benchmark: " + Double.toString(laptop1.getBenchmark()));
+            img1.setImage(new Image(laptop1.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name1.setText("");
@@ -86,14 +92,15 @@ public class CostSavingController {
             review1.setText("");
             benchmark1.setText("");
         }
-
+    
         if (numLaptops >= 2) {
             Laptop laptop2 = laptops.get(1);
-            name11.setText(laptop2.getName());
-            cost11.setText(Double.toString(laptop2.getCost()));
-            warranty11.setText(Double.toString(laptop2.getWarranty()));
-            review11.setText(Double.toString(laptop2.getReview()));
-            benchmark11.setText(Double.toString(laptop2.getBenchmark()));
+            name11.setText("Name: " + laptop2.getName());
+            cost11.setText("Cost: $" + Double.toString(laptop2.getCost()));
+            warranty11.setText("Warranty: " + Double.toString(laptop2.getWarranty()) + " years");
+            review11.setText("Review: " + Double.toString(laptop2.getReview()) + "/5");
+            benchmark11.setText("Benchmark: " + Double.toString(laptop2.getBenchmark()));
+            img11.setImage(new Image(laptop2.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name11.setText("");
@@ -102,14 +109,15 @@ public class CostSavingController {
             review11.setText("");
             benchmark11.setText("");
         }
-
+    
         if (numLaptops >= 3) {
             Laptop laptop3 = laptops.get(2);
-            name111.setText(laptop3.getName());
-            cost111.setText(Double.toString(laptop3.getCost()));
-            warranty111.setText(Double.toString(laptop3.getWarranty()));
-            review111.setText(Double.toString(laptop3.getReview()));
-            benchmark111.setText(Double.toString(laptop3.getBenchmark()));
+            name111.setText("Name: " + laptop3.getName());
+            cost111.setText("Cost: $" + Double.toString(laptop3.getCost()));
+            warranty111.setText("Warranty: " + Double.toString(laptop3.getWarranty()) + " years");
+            review111.setText("Review: " + Double.toString(laptop3.getReview()) + "/5");
+            benchmark111.setText("Benchmark: " + Double.toString(laptop3.getBenchmark()));
+            img111.setImage(new Image(laptop3.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name111.setText("");
@@ -118,7 +126,6 @@ public class CostSavingController {
             review111.setText("");
             benchmark111.setText("");
         }
-
     }
 
      @FXML
