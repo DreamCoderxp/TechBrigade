@@ -69,35 +69,36 @@ public class ComparisonController {
 
     protected void showLaptops(ArrayList<Laptop> laptops) {
 
-        for (int i=0; i<laptops.size();i++) {
-            if (i==0) {
-                name1.setText(laptops.get(i).getName());
-                cost1.setText(Double.toString(laptops.get(i).getCost()));
-                weight1.setText(Double.toString(laptops.get(i).getWeight()));
-                processor1.setText(laptops.get(i).getProcessor());
-                screen1.setText(Double.toString(laptops.get(i).getScreenSize()));
-                os1.setText(laptops.get(i).getOs());
-                storage1.setText(Integer.toString(laptops.get(i).getStorage()));
-                ram1.setText(Integer.toString(laptops.get(i).getRam()));
-                battery1.setText(Double.toString(laptops.get(i).getBatteryLife()));
+        for (int i = 0; i < laptops.size(); i++) {
+            if (i == 0) {
+                name1.setText("Name: " + laptops.get(i).getName());
+                cost1.setText("Cost: $" + Double.toString(laptops.get(i).getCost()));
+                weight1.setText("Weight: " + Double.toString(laptops.get(i).getWeight()) + " lbs");
+                processor1.setText("Processor: " + laptops.get(i).getProcessor());
+                screen1.setText("Screen Size: " + Double.toString(laptops.get(i).getScreenSize()) + " inches");
+                os1.setText("Operating System: " + laptops.get(i).getOs());
+                storage1.setText("Storage: " + Integer.toString(laptops.get(i).getStorage()) + " GB");
+                ram1.setText("RAM: " + Integer.toString(laptops.get(i).getRam()) + " GB");
+                battery1.setText("Battery Life: " + Double.toString(laptops.get(i).getBatteryLife()) + " hours");
                 img1.setImage(new Image(laptops.get(i).getUrl()));
             } 
-            
-            if (i==1) {
-                name11.setText(laptops.get(i).getName());
-                cost11.setText(Double.toString(laptops.get(i).getCost()));
-                weight11.setText(Double.toString(laptops.get(i).getWeight()));
-                processor11.setText(laptops.get(i).getProcessor());
-                screen11.setText(Double.toString(laptops.get(i).getScreenSize()));
-                os11.setText(laptops.get(i).getOs());
-                storage11.setText(Integer.toString(laptops.get(i).getStorage()));
-                ram11.setText(Integer.toString(laptops.get(i).getRam()));
-                battery11.setText(Double.toString(laptops.get(i).getBatteryLife()));
+    
+            if (i == 1) {
+                name11.setText("Name: " + laptops.get(i).getName());
+                cost11.setText("Cost: $" + Double.toString(laptops.get(i).getCost()));
+                weight11.setText("Weight: " + Double.toString(laptops.get(i).getWeight()) + " lbs");
+                processor11.setText("Processor: " + laptops.get(i).getProcessor());
+                screen11.setText("Screen Size: " + Double.toString(laptops.get(i).getScreenSize()) + " inches");
+                os11.setText("Operating System: " + laptops.get(i).getOs());
+                storage11.setText("Storage: " + Integer.toString(laptops.get(i).getStorage()) + " GB");
+                ram11.setText("RAM: " + Integer.toString(laptops.get(i).getRam()) + " GB");
+                battery11.setText("Battery Life: " + Double.toString(laptops.get(i).getBatteryLife()) + " hours");
                 img11.setImage(new Image(laptops.get(i).getUrl()));
             }
         }
-
     }
+
+    
 
      @FXML
     protected void goHome() throws IOException {
