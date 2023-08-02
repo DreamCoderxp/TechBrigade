@@ -6,25 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.App">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="934.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.App">
    <children>
-      <VBox layoutX="289.0" layoutY="45.0" prefHeight="97.0" prefWidth="274.0">
-         <children>
-            <Label contentDisplay="CENTER" prefHeight="75.0" prefWidth="219.0" text="Laptop Advisor" textAlignment="CENTER">
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-               <font>
-                  <Font name="Bodoni MT Bold" size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-      <GridPane layoutX="113.0" layoutY="219.0" prefHeight="310.0" prefWidth="706.0">
+      <GridPane layoutX="57.0" layoutY="159.0" prefHeight="462.0" prefWidth="818.0" style="-fx-border-color: #000080; -fx-border-width: 5px;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -38,16 +26,69 @@
          <children>
             <Label />
             <Label GridPane.columnIndex="1" />
-            <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#showAdditionalFeature" text="AdditionalFeature" />
-            <Button mnemonicParsing="false" text="ProgramTailored" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#showSpecFilter" text="SpecificationFilter" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#showPortability" text="Portability" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="HighEndLaptop Recommendation" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#showCostSavingAnalysis" text="Cost Analysis" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#showLifespanEstimation" text="Lifespan Estimation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" onAction="#showComparison" text="Comparison" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="High End Laptop Recommendation" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="AdditionalFeature" textFill="#1e1c1c">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="ProgramTailored" textFill="#1e1c1c" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Comparison" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="SpecificationFilter" textFill="#1e1c1c" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Cost Analysis" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Portability" textFill="#1e1c1c" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="377.0" style="-fx-background-color: #D3D3D3.;" text="Lifespan Estimation" textFill="#1e1c1c" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
+      <HBox layoutX="305.0" layoutY="41.0" prefHeight="77.0" prefWidth="424.0">
+         <children>
+            <Label prefHeight="60.0" prefWidth="174.0" text="Laptop" textFill="#1e88e5">
+               <font>
+                  <Font name="Bodoni MT Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="68.0" prefWidth="146.0" text="Quest">
+               <font>
+                  <Font name="Bodoni MT Bold" size="48.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="57.0" layoutY="128.0" text="&quot;This is your QUEST!!  Explore, Compare, and Discover!&quot;" textFill="#eb7410c4">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

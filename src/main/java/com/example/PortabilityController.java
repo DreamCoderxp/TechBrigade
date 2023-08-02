@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class PortabilityController {
@@ -29,6 +31,9 @@ public class PortabilityController {
     @FXML
     private Label name111, cost111, weight111, screen111, processor111, portability111;
 
+    @FXML
+    private ImageView img1, img11, img111;
+
     private int portabilityScore;
     // // Initialize arrays with the FXML IDs
     //     nameLabels = new Label[]{name1, name11, name111};
@@ -38,15 +43,7 @@ public class PortabilityController {
     //     processorLabels = new Label[]{processor1, processor11, processor111};
     //     portabilityLabels = new Label[]{portability1, portability11, portability111};
 
-   //tj
-   //tj3
-   //tj3
-   //tj3
-   //tj3
-   //t33
-   //tj
-   //tj
-   //tj
+   
 
     @FXML
     public void initialize() {
@@ -60,6 +57,7 @@ public class PortabilityController {
    }
    
     protected void showLaptops(ArrayList<Laptop> laptops) {
+
         int numLaptops = Math.min(laptops.size(), 3);
         System.out.println(laptops.size());
         if (numLaptops >= 1) {
@@ -70,6 +68,8 @@ public class PortabilityController {
             screen1.setText(Double.toString(laptop1.getScreenSize()));
             processor1.setText(laptop1.getProcessor());
             portability1.setText(Integer.toString(laptop1.getPortability()));
+           
+            img1.setImage(new Image(laptop1.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name1.setText("");
@@ -88,6 +88,7 @@ public class PortabilityController {
             screen11.setText(Double.toString(laptop2.getScreenSize()));
             processor11.setText(laptop2.getProcessor());
             portability11.setText(Integer.toString(laptop2.getPortability()));
+            img11.setImage(new Image(laptop2.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name11.setText("");
@@ -106,6 +107,7 @@ public class PortabilityController {
             screen111.setText(Double.toString(laptop3.getScreenSize()));
             processor111.setText(laptop3.getProcessor());
             portability111.setText(Integer.toString(laptop3.getPortability()));
+            img111.setImage(new Image(laptop3.getUrl()));
         } else {
             // Reset fields to blank if no laptop data
             name111.setText("");
@@ -114,6 +116,7 @@ public class PortabilityController {
             screen111.setText("");
             processor111.setText("");
             portability111.setText("");
+            
         }
     }
 
@@ -157,5 +160,5 @@ protected void handleChoiceSelection() {
         stage.setScene(scene);
         stage.show();
     }
-    
+
 }

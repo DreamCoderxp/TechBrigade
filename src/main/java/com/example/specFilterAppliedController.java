@@ -33,6 +33,7 @@ public class specFilterAppliedController {
             ram1.setText(Integer.toString(laptops.get(0).getRam()));
             storage1.setText(Integer.toString(laptops.get(0).getStorage()));
             processor1.setText(laptops.get(0).getProcessor());
+            
         } else {
             name1.setText("");
             cost1.setText("");
