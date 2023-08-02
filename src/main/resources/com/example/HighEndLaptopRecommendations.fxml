@@ -25,7 +25,7 @@
             </Label>
             <ButtonBar layoutX="95.0" layoutY="480.0" prefHeight="40.0" prefWidth="287.0">
                <buttons>
-                <Button contentDisplay="CENTER" minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" text="Home" textAlignment="CENTER" />
+                <Button contentDisplay="CENTER" onAction="#goHome" minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" text="Home" textAlignment="CENTER" />
                </buttons>
             </ButtonBar>
          </children>
