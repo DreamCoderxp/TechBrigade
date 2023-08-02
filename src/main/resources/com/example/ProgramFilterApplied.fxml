@@ -42,19 +42,19 @@
             </Pane>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label fx:id="name1" text="Name" />
+                  <Label fx:id="name1" prefHeight="18.0" prefWidth="191.0" text="Name" />
                   <Label fx:id="cost1" prefHeight="18.0" prefWidth="122.0" text="Cost" />
-                  <Label fx:id="ram1" text="Ram" />
-                  <Label fx:id="storage1" prefHeight="18.0" prefWidth="115.0" text="Storage" />
+                  <Label fx:id="ram1" prefHeight="18.0" prefWidth="90.0" text="Ram" />
+                  <Label fx:id="storage1" prefHeight="18.0" prefWidth="135.0" text="Storage" />
                   <Label fx:id="processor1" prefHeight="18.0" prefWidth="126.0" text="Processor" />
                   <Label fx:id="message1" prefHeight="36.0" prefWidth="163.0" text="Label" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="name11" text="Name" />
-                  <Label fx:id="cost11" prefHeight="6.0" prefWidth="28.0" text="Cost" />
-                  <Label fx:id="ram11" text="Ram" />
+                  <Label fx:id="name11" prefHeight="18.0" prefWidth="238.0" text="Name" />
+                  <Label fx:id="cost11" prefHeight="18.0" prefWidth="80.0" text="Cost" />
+                  <Label fx:id="ram11" prefHeight="18.0" prefWidth="104.0" text="Ram" />
                   <Label fx:id="storage11" prefHeight="18.0" prefWidth="83.0" text="Storage" />
                   <Label fx:id="processor11" prefHeight="18.0" prefWidth="135.0" text="Processor" />
                   <Label fx:id="message11" prefHeight="36.0" prefWidth="163.0" text="Label" />
@@ -62,9 +62,9 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="name111" text="Name" />
-                  <Label fx:id="cost111" prefHeight="6.0" prefWidth="28.0" text="Cost" />
-                  <Label fx:id="ram111" text="Ram" />
+                  <Label fx:id="name111" prefHeight="18.0" prefWidth="182.0" text="Name" />
+                  <Label fx:id="cost111" prefHeight="18.0" prefWidth="87.0" text="Cost" />
+                  <Label fx:id="ram111" prefHeight="18.0" prefWidth="93.0" text="Ram" />
                   <Label fx:id="storage111" prefHeight="18.0" prefWidth="178.0" text="Storage" />
                   <Label fx:id="processor111" prefHeight="18.0" prefWidth="230.0" text="Processor" />
                   <Label fx:id="message111" prefHeight="36.0" prefWidth="163.0" text="Label" />
@@ -72,9 +72,9 @@
             </VBox>
          </children>
       </GridPane>
-      <VBox layoutX="39.0" layoutY="32.0" prefHeight="186.0" prefWidth="387.0">
+      <VBox layoutX="39.0" layoutY="32.0" prefHeight="186.0" prefWidth="480.0">
          <children>
-            <Label contentDisplay="CENTER" prefHeight="65.0" prefWidth="225.0" text="Laptop Advisor" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" prefHeight="65.0" prefWidth="225.0" text="Laptop Quest" textAlignment="CENTER">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
@@ -82,7 +82,7 @@
                   <Font name="Bodoni MT Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="messageTop" prefHeight="82.0" prefWidth="394.0" text="Message">
+            <Label fx:id="messageTop" prefHeight="82.0" prefWidth="446.0" text="Here the best laptops for your program!!">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>

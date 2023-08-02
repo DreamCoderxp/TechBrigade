@@ -24,12 +24,12 @@
           <RowConstraints maxHeight="56.80000915527343" minHeight="10.0" prefHeight="37.6" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" prefHeight="76.0" prefWidth="1127.0" text="Laptop Advisor" textFill="#4e3939">
+            <Label alignment="CENTER" prefHeight="76.0" prefWidth="1127.0" text="Laptop Quest" textFill="#4e3939">
                <font>
                   <Font name="Bodoni MT Black" size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1122.0" text="Browse Innovative Features" GridPane.rowIndex="1">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1122.0" text="Innovative Features" GridPane.rowIndex="1">
                <font>
                   <Font size="21.0" />
                </font>

@@ -23,7 +23,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" prefHeight="35.0" prefWidth="542.0" text="Laptop Advisor">
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="542.0" text="Laptop Quest">
                <font>
                   <Font name="Bodoni MT Black" size="24.0" />
                </font>
