@@ -79,6 +79,16 @@ public class ProgramController {
         stage.show();
 
     }
+
+    //goHome method here
+    @FXML
+    protected void goHome() throws IOException {
+        Stage stage = App.getStage();
+        Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     
 
 }

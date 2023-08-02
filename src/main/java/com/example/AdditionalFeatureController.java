@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class AdditionalFeatureController {
@@ -19,6 +20,9 @@ public class AdditionalFeatureController {
     private Button touchscreenBt;
     @FXML
     private Button twoInOneBt;
+
+    @FXML
+    private ImageView img1, img11, img111;
 
     ArrayList<Laptop> filteredLaptops;
     String storedMessageTop;
