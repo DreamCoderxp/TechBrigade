@@ -91,4 +91,43 @@ public class LaptopDatabase {
         return laptops;
         
 }
+    protected ArrayList<Laptop> getCostLaptops(String processor) {
+        ArrayList<Laptop> laptops = new ArrayList<Laptop>();
+        
+        try {
+            File fname= new File("src\\main\\java\\com\\example\\laptopData.csv");
+            Scanner input = new Scanner(fname);
+
+            while (input.hasNext()) {
+            //System.out.println(input.nextLine());
+            String[] laptopData = input.nextLine().split(",");
+
+            for(int i=0;i<laptopData.length;i++) {
+                laptopData[i] = laptopData[i].replaceAll("\"", "");
+            }
+                
+                if(laptopData[6].equals(processor)) {
+                    
+                    ArrayList<String> laptopSpecs = new ArrayList<String>();
+
+                    for(int i=0;i<laptopData.length;i++) {
+                        laptopSpecs.add(laptopData[i]);
+                    }
+
+                    // //print the laptopSpecs
+                    // for(int i=0;i<laptopSpecs.size();i++) {
+                    //     System.out.println(laptopSpecs.get(i));
+                    // }
+                    Laptop laptop = new Laptop(laptopSpecs);
+                    laptops.add(laptop);
+                }
+            }
+            input.close();
+            
+        } catch (Exception e) {
+            System.out.println("File not found");
+        }
+        return laptops;
+
+    }
 }

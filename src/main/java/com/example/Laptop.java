@@ -22,6 +22,7 @@ public class Laptop {
     private int benchmark;
     private int warranty;
     private double review;
+    private double lifespan;
 
 
     public Laptop(ArrayList<String> laptopSpecs) {
@@ -44,8 +45,17 @@ public class Laptop {
         this.warranty = Integer.parseInt(laptopSpecs.get(16));
         this.review = Double.parseDouble(laptopSpecs.get(17));
          this.brand = laptopSpecs.get(18);
+            this.lifespan = Double.parseDouble(laptopSpecs.get(19));
     }
     
+    public double getLifespan() {
+        return lifespan;
+    }
+
+    public void setLifespan(double lifespan) {
+        this.lifespan = lifespan;
+    }
+
     public int getId() {
         return id;
     }
@@ -162,12 +172,15 @@ public class Laptop {
     }
     
     @Override
-    public String toString(){
-        return "Laptop [id=" + id + ", name=" + name + ", brand=" + brand + ", processor=" + processor + ", ram=" + ram
-                + ", storage=" + storage + ", cost=" + cost + ", os=" + os + ", cpuType=" + cpuType + ", screenSize="
-                + screenSize + ", weight=" + weight + ", batteryLife=" + batteryLife + ", touchScreen=" + touchScreen
-                + ", backlit=" + backlit + ", twoInOne=" + twoInOne + ", portability=" + portability + ", benchmark="
-                + benchmark + ", warranty=" + warranty + ", review=" + review + "]";
+    public String toString() {
+        return "Laptop [backlit=" + backlit + ", batteryLife=" + batteryLife + ", benchmark=" + benchmark + ", brand="
+                + brand + ", cost=" + cost + ", cpuType=" + cpuType + ", id=" + id + ", name=" + name + ", os=" + os
+                + ", portability=" + portability + ", processor=" + processor + ", ram=" + ram + ", review=" + review
+                + ", screenSize=" + screenSize + ", storage=" + storage + ", touchScreen=" + touchScreen + ", twoInOne="
+                + twoInOne + ", warranty=" + warranty + ", weight=" + weight + "]";
+
+
+
     }
 
 }
