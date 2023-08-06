@@ -9,7 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,7 +20,7 @@ public class PortabilityController {
     ArrayList<Laptop> filteredLaptops;
     
     @FXML
-    private ChoiceBox<String> portabilityChoiceBox;
+    private ComboBox<String> portabilityComboBox;
 
     @FXML
     private Label name1, cost1, weight1, screen1, processor1, portability1;
@@ -35,31 +35,17 @@ public class PortabilityController {
     private ImageView img1, img11, img111;
 
     private int portabilityScore;
-    // // Initialize arrays with the FXML IDs
-    //     nameLabels = new Label[]{name1, name11, name111};
-    //     costLabels = new Label[]{cost1, cost11, cost111};
-    //     weightLabels = new Label[]{weight1, weight11, weight111};
-    //     screenLabels = new Label[]{screen1, screen11, screen111};
-    //     processorLabels = new Label[]{processor1, processor11, processor111};
-    //     portabilityLabels = new Label[]{portability1, portability11, portability111};
-
-   
 
     @FXML
     public void initialize() {
-        // Populate the ChoiceBox with the desired choices
-        portabilityChoiceBox.getItems().addAll("Low Portability", "Medium Portability", "High Portability");    
-
-        // Set the default value (optional)
-        portabilityChoiceBox.setValue("High Portability");
-      // Register an event handler to handle choice selection
-        portabilityChoiceBox.setOnAction(event -> handleChoiceSelection());
+        portabilityComboBox.getItems().addAll("Low Portability", "Medium Portability", "High Portability");    
+    
+        portabilityComboBox.setOnAction(event -> handleChoiceSelection());
    }
    
    protected void showLaptops(ArrayList<Laptop> laptops) {
     int numLaptops = Math.min(laptops.size(), 3);
-    System.out.println(laptops.size());
-
+    
     if (numLaptops >= 1) {
         Laptop laptop1 = laptops.get(0);
         name1.setText("Name: " + laptop1.getName());
@@ -70,7 +56,6 @@ public class PortabilityController {
         portability1.setText("Portability: " + Integer.toString(laptop1.getPortability()));
         img1.setImage(new Image(laptop1.getUrl()));
     } else {
-        // Reset fields to blank if no laptop data
         name1.setText("");
         cost1.setText("");
         weight1.setText("");
@@ -89,7 +74,6 @@ public class PortabilityController {
         portability11.setText("Portability: " + Integer.toString(laptop2.getPortability()));
         img11.setImage(new Image(laptop2.getUrl()));
     } else {
-        // Reset fields to blank if no laptop data
         name11.setText("");
         cost11.setText("");
         weight11.setText("");
@@ -108,7 +92,6 @@ public class PortabilityController {
         portability111.setText("Portability: " + Integer.toString(laptop3.getPortability()));
         img111.setImage(new Image(laptop3.getUrl()));
     } else {
-        // Reset fields to blank if no laptop data
         name111.setText("");
         cost111.setText("");
         weight111.setText("");
@@ -122,10 +105,8 @@ public class PortabilityController {
 
 
 protected void handleChoiceSelection() {
-    // Handle the choice selection event here
-    String selectedPortability = portabilityChoiceBox.getValue();
-
-    System.out.println("Selected Portability: " + selectedPortability);
+    
+    String selectedPortability = portabilityComboBox.getValue();
 
     if(selectedPortability.equals("Low Portability")){
         portabilityScore = 35;
@@ -141,9 +122,6 @@ protected void handleChoiceSelection() {
     LaptopDatabase portableLaptopsDB = new LaptopDatabase();
     filteredLaptops = portableLaptopsDB.getPortableLaptops(portabilityScore);
 
-    for (Laptop laptop : filteredLaptops) {
-        System.out.println(laptop.getName());
-    }
     // Update the display to show the new laptops
     showLaptops(filteredLaptops);
 }
@@ -151,7 +129,6 @@ protected void handleChoiceSelection() {
 
     @FXML
     protected void goHome() throws IOException {
-        // TODO Auto-generated method stub
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
         Scene scene = new Scene(root);

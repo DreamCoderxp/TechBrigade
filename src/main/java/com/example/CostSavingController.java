@@ -32,26 +32,15 @@ public class CostSavingController {
 
     @FXML
     protected void initialize() {
-        // TODO Auto-generated method stub
         costComboBox.getItems().addAll("Basic Tasks","Office Work", "Gaming");
-        
-        // Set the default value (optional)
-       // costComboBox.setValue("Basic Tasks");
 
-        
         // Register an event handler to handle choice selection
         costComboBox.setOnAction(event -> handleChoiceSelection());
-
     }
 
     protected void handleChoiceSelection() {
 
-        // Handle the choice selection event here
         String selectedCost = costComboBox.getValue();
-
-        System.out.println("Selected Cost: " + selectedCost);
-
-
         String processor="";
 
         if(selectedCost.equals("Basic Tasks")){
@@ -65,9 +54,6 @@ public class CostSavingController {
         LaptopDatabase costLaptopsDB = new LaptopDatabase();
          filteredLaptops = costLaptopsDB.getCostLaptops(processor);
 
-        for (Laptop laptop : filteredLaptops) {
-            System.out.println(laptop.getName());
-        }
         // Update the display to show the new laptops
         showLaptops(filteredLaptops);
     }
@@ -75,7 +61,6 @@ public class CostSavingController {
 
     protected void showLaptops(ArrayList<Laptop> laptops) {
         int numLaptops = Math.min(laptops.size(), 3);
-        System.out.println(laptops.size());
         if (numLaptops >= 1) {
             Laptop laptop1 = laptops.get(0);
             name1.setText("Name: " + laptop1.getName());
@@ -85,7 +70,6 @@ public class CostSavingController {
             benchmark1.setText("Benchmark: " + Double.toString(laptop1.getBenchmark()));
             img1.setImage(new Image(laptop1.getUrl()));
         } else {
-            // Reset fields to blank if no laptop data
             name1.setText("");
             cost1.setText("");
             warranty1.setText("");
@@ -102,7 +86,6 @@ public class CostSavingController {
             benchmark11.setText("Benchmark: " + Double.toString(laptop2.getBenchmark()));
             img11.setImage(new Image(laptop2.getUrl()));
         } else {
-            // Reset fields to blank if no laptop data
             name11.setText("");
             cost11.setText("");
             warranty11.setText("");
@@ -119,7 +102,6 @@ public class CostSavingController {
             benchmark111.setText("Benchmark: " + Double.toString(laptop3.getBenchmark()));
             img111.setImage(new Image(laptop3.getUrl()));
         } else {
-            // Reset fields to blank if no laptop data
             name111.setText("");
             cost111.setText("");
             warranty111.setText("");
@@ -130,7 +112,7 @@ public class CostSavingController {
 
      @FXML
     protected void goHome() throws IOException {
-        // TODO Auto-generated method stub
+
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
         Scene scene = new Scene(root);

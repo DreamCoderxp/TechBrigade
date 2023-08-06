@@ -29,32 +29,41 @@
             <ImageView fx:id="img111" fitHeight="114.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label fx:id="name1" text="Name" />
+                  <Label fx:id="name1" prefHeight="18.0" prefWidth="191.0" text="Name" />
                   <Label fx:id="cost1" prefHeight="18.0" prefWidth="122.0" text="Cost" />
-                  <Label fx:id="ram1" text="Ram" />
+                  <Label fx:id="ram1" prefHeight="18.0" prefWidth="205.0" text="Ram" />
                   <Label fx:id="storage1" prefHeight="18.0" prefWidth="115.0" text="Storage" />
                   <Label fx:id="processor1" prefHeight="18.0" prefWidth="126.0" text="Processor" />
-                  <Label fx:id="message1" prefHeight="36.0" prefWidth="163.0" text="Label" />
+                  <Label fx:id="message1" prefHeight="36.0" prefWidth="163.0" text="Label">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="name11" text="Name" />
-                  <Label fx:id="cost11" prefHeight="6.0" prefWidth="28.0" text="Cost" />
-                  <Label fx:id="ram11" text="Ram" />
+                  <Label fx:id="name11" prefHeight="18.0" prefWidth="172.0" text="Name" />
+                  <Label fx:id="cost11" prefHeight="18.0" prefWidth="212.0" text="Cost" />
+                  <Label fx:id="ram11" prefHeight="18.0" prefWidth="146.0" text="Ram" />
                   <Label fx:id="storage11" prefHeight="18.0" prefWidth="83.0" text="Storage" />
                   <Label fx:id="processor11" prefHeight="18.0" prefWidth="135.0" text="Processor" />
-                  <Label fx:id="message11" prefHeight="36.0" prefWidth="163.0" text="Label" />
+                  <Label fx:id="message11" prefHeight="36.0" prefWidth="163.0" text="Label">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="name111" text="Name" />
-                  <Label fx:id="cost111" prefHeight="6.0" prefWidth="28.0" text="Cost" />
-                  <Label fx:id="ram111" text="Ram" />
+                  <Label fx:id="name111" prefHeight="18.0" prefWidth="190.0" text="Name" />
+                  <Label fx:id="cost111" prefHeight="18.0" prefWidth="198.0" text="Cost" />
+                  <Label fx:id="ram111" prefHeight="18.0" prefWidth="259.0" text="Ram" />
                   <Label fx:id="storage111" prefHeight="18.0" prefWidth="178.0" text="Storage" />
                   <Label fx:id="processor111" prefHeight="18.0" prefWidth="230.0" text="Processor" />
-                  <Label fx:id="message111" prefHeight="36.0" prefWidth="163.0" text="Label" />
+                  <Label fx:id="message111" prefHeight="36.0" prefWidth="163.0" text="Label">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
                </children>
             </VBox>
          </children>

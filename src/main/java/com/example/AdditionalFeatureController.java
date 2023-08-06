@@ -28,30 +28,28 @@ public class AdditionalFeatureController {
     @FXML
     public void initialize() {
         
-        backlitBt.setOnAction(arg0 -> {
+        backlitBt.setOnAction(event -> {
             try {
-                handleChoiceSelection(arg0);
+                handleChoiceSelection(event);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         });
-        touchscreenBt.setOnAction(arg0 -> {
+        touchscreenBt.setOnAction(event -> {
             try {
-                handleChoiceSelection(arg0);
+                handleChoiceSelection(event);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         });
-        twoInOneBt.setOnAction(arg0 -> {
+        twoInOneBt.setOnAction(event -> {
             try {
-                handleChoiceSelection(arg0);
+                handleChoiceSelection(event);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         });
+        
 
     }
 
@@ -62,17 +60,17 @@ public class AdditionalFeatureController {
         Button button = (Button) event.getSource();
 
         if (button == backlitBt) {
-            System.out.println("Backlit Keyboard");
+
             storedMessageTop="Checkout PC's with Backlit Keyboard";
             storedMessageInner="Backlit Keyboard Enabled ";
             signal = 1;
         } else if (button == touchscreenBt) {
-            System.out.println("Touchscreen");
+
             storedMessageTop="Checkout PC's with Touchscreen";
             storedMessageInner="Touchscreen Enabled ";
             signal = 2;
         } else if (button == twoInOneBt) {
-            System.out.println("2-in-1");
+
             storedMessageTop="Checkout 2-in-1 PC's";
             storedMessageInner="2-in-1 Laptop ";
             signal = 3;
@@ -86,12 +84,6 @@ public class AdditionalFeatureController {
 
     @FXML
     protected void showAdditionalFeatLaptops(ArrayList<Laptop> laptops) throws IOException {
-        // TODO Auto-generated method stub
-        //System.out.println("Showing laptops with additional features");
-        //System.out.println(laptops.size());
-        for (Laptop laptop : laptops) {
-            System.out.println(laptop.getName());
-        }
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AFeatureApplied.fxml"));
         Parent root = loader.load();
@@ -109,7 +101,6 @@ public class AdditionalFeatureController {
 
     @FXML
     protected void goHome() throws IOException {
-        // TODO Auto-generated method stub
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
         Scene scene = new Scene(root);

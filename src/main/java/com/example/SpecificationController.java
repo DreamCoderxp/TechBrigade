@@ -16,23 +16,7 @@ public class SpecificationController {
     ArrayList<Laptop> filteredLaptops;
 
     @FXML
-    // create fields for all the radio button toggle groups in the fxml file
-    private RadioButton ramBt1;
-    private RadioButton ramBt2;
-    private RadioButton ramBt3;
-
-    @FXML
-    private Label message; 
-
-    @FXML
-    private RadioButton cpuBt1;
-    private RadioButton cpuBt2;
-    private RadioButton cpuBt3;
-
-    @FXML
-    private RadioButton screenBt1;
-    private RadioButton screenBt2;
-    private RadioButton screenBt3;
+    private Label message;
 
     @FXML
     private ToggleGroup ram;
@@ -43,19 +27,14 @@ public class SpecificationController {
 
     @FXML
     protected void initialize() {
-        // TODO Auto-generated method stub
-
+        // nothing felt needed here
     }
 
     @FXML
     protected void applySpecFilter() throws IOException {
-        // TODO Auto-generated method stub
 
-        // generate code for getting the selected values from radio button toggle groups
-        // in the fxml file
         RadioButton selectedRamButton = (RadioButton) ram.getSelectedToggle();
         String ramValue = selectedRamButton.getText();
-        System.out.println(ramValue);
 
         RadioButton selectedCpuButton = (RadioButton) cpu.getSelectedToggle();
         String cpuValue = selectedCpuButton.getText();
@@ -68,51 +47,39 @@ public class SpecificationController {
         double screenSizeDouble = convertScreenSizeValue(screenSizeValue);
 
         LaptopDatabase speclaptopsDB = new LaptopDatabase();
-         filteredLaptops=  speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
-
-        //System.out.println(filteredLaptops);
-        for(Laptop laptop: filteredLaptops) {
-            System.out.println(laptop.toString());
-        }
+        filteredLaptops = speclaptopsDB.getSpecLaptops(ramInt, cpuValue, screenSizeDouble);
 
         // generate code for showing the filtered laptops in a new window
         showSpecFilterApplied();
-        
 
     }
 
     @FXML
-protected void showSpecFilterApplied() throws IOException {
-    if (filteredLaptops.isEmpty()) {
-        // // If the filteredLaptops ArrayList is empty, just load and set the SpecificationFilter.fxml
-        // Parent root = FXMLLoader.load(getClass().getResource("SpecificationFilter.fxml"));
+    protected void showSpecFilterApplied() throws IOException {
+        if (filteredLaptops.isEmpty()) {
 
-       
-        // Stage stage = App.getStage();
+            // If filteredLaptops is empty, we show a message
+            message.setText("No laptops found. Please try again.");
+            message.setStyle("-fx-text-fill: red;");
 
-        // stage.setTitle("Specification Filter");
-        // stage.setScene(new Scene(root));
-        message.setText("No laptops found. Please try again.");
-     //   stage.show();
-    } else {
 
-        // If filteredLaptops is not empty, proceed with showing the specFilterApplied.fxml
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecFilterApplied.fxml"));
-        Parent root = loader.load();
-        specFilterAppliedController controller = loader.getController();
-        controller.showLaptops(filteredLaptops);
+        } else {
 
-        Stage stage = App.getStage();
-        stage.setTitle("Specification Filter Applied");
-        stage.setScene(new Scene(root));
-        stage.show();
-    }    
-}
+            // If filteredLaptops is not empty, we proceed with showing the
+            // specFilterApplied.fxml
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecFilterApplied.fxml"));
+            Parent root = loader.load();
+            specFilterAppliedController controller = loader.getController();
+            controller.showLaptops(filteredLaptops);
 
+            Stage stage = App.getStage();
+            stage.setTitle("Specification Filter Applied");
+            stage.setScene(new Scene(root));
+            stage.show();
+        }
+    }
 
     protected int convertRamValue(String ramValue) {
-        // TODO Auto-generated method stub
-
         int ramInt = 0;
 
         if (ramValue.equals("8 GB")) {
@@ -127,8 +94,6 @@ protected void showSpecFilterApplied() throws IOException {
     }
 
     protected double convertScreenSizeValue(String screenSizeValue) {
-        // TODO Auto-generated method stub
-
         double screenSizeDouble = 0;
 
         if (screenSizeValue.equals("13.3\"")) {
@@ -145,7 +110,6 @@ protected void showSpecFilterApplied() throws IOException {
 
     @FXML
     protected void goHome() throws IOException {
-        // TODO Auto-generated method stub
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
         Scene scene = new Scene(root);

@@ -1,9 +1,7 @@
 package com.example;
 
-//import hashmap
 import java.util.HashMap;
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,13 +19,12 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
                 laptopData[i] = laptopData[i].replaceAll("\"", "");
             }
-                //we will convert screensizes to double before comparing
+               
                 if(laptopData[3].equals(ramString)&& laptopData[5].equals(cpu)&& laptopData[8].equals(screenSizeString)) {
                    
 
@@ -60,7 +57,6 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -76,10 +72,6 @@ public class LaptopDatabase {
                         laptopSpecs.add(laptopData[i]);
                     }
 
-                    // //print the laptopSpecs
-                    // for(int i=0;i<laptopSpecs.size();i++) {
-                    //     System.out.println(laptopSpecs.get(i));
-                    // }
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
                 }
@@ -100,7 +92,6 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -115,10 +106,6 @@ public class LaptopDatabase {
                         laptopSpecs.add(laptopData[i]);
                     }
 
-                    // //print the laptopSpecs
-                    // for(int i=0;i<laptopSpecs.size();i++) {
-                    //     System.out.println(laptopSpecs.get(i));
-                    // }
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
                 }
@@ -140,7 +127,6 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -155,10 +141,6 @@ public class LaptopDatabase {
                         laptopSpecs.add(laptopData[i]);
                     }
 
-                    // //print the laptopSpecs
-                    // for(int i=0;i<laptopSpecs.size();i++) {
-                    //     System.out.println(laptopSpecs.get(i));
-                    // }
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
                 }
@@ -179,7 +161,6 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -193,11 +174,6 @@ public class LaptopDatabase {
                     for(int i=0;i<laptopData.length;i++) {
                         laptopSpecs.add(laptopData[i]);
                     }
-                    
-                    // //print the laptopSpecs
-                    // for(int i=0;i<laptopSpecs.size();i++) {
-                    //     System.out.println(laptopSpecs.get(i));
-                    // }
 
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
@@ -222,7 +198,7 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
+
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -237,10 +213,6 @@ public class LaptopDatabase {
                         laptopSpecs.add(laptopData[i]);
                     }
 
-                    //print the laptopSpecs
-                    for(int i=0;i<laptopSpecs.size();i++) {
-                        System.out.println(laptopSpecs.get(i));
-                    }
                     Laptop laptop = new Laptop(laptopSpecs);
                     laptops.add(laptop);
 
@@ -265,7 +237,7 @@ public class LaptopDatabase {
             Scanner input = new Scanner(fname);
 
             while (input.hasNext()) {
-            //System.out.println(input.nextLine());
+
             String[] laptopData = input.nextLine().split(",");
 
             for(int i=0;i<laptopData.length;i++) {
@@ -273,68 +245,40 @@ public class LaptopDatabase {
             }
                 
                 if (signal==1 && laptopData[11].equals("True")) {
-                    //if (laptopData[11].equals("TRUE")) {
-                        //System.out.println("True found here ");
+
                         ArrayList<String> laptopSpecs = new ArrayList<String>();
 
                         for(int i=0;i<laptopData.length;i++) {
                             laptopSpecs.add(laptopData[i]);
                         }
-
-                        // //print the laptopSpecs
-                        // for(int i=0;i<laptopSpecs.size();i++) {
-                        //     System.out.println(laptopSpecs.get(i));
-                        // }
+                        
                         laptop = new Laptop(laptopSpecs);
                         laptops.add(laptop);
                     }
                         else if (signal==2 && laptopData[12].equals("True")) {
-                   // if (laptopData[12].equals("TRUE")) {
+                                         
                         ArrayList<String> laptopSpecs = new ArrayList<String>();
 
                         for(int i=0;i<laptopData.length;i++) {
                             laptopSpecs.add(laptopData[i]);
                         }
 
-                        // //print the laptopSpecs
-                        // for(int i=0;i<laptopSpecs.size();i++) {
-                        //     System.out.println(laptopSpecs.get(i));
-                        // }
                         laptop = new Laptop(laptopSpecs);
                         laptops.add(laptop);
-                    //}
+                    
                 } else if (signal==3 && laptopData[13].equals("True")) {
-                    //if (laptopData[13].equals("TRUE")) {
+                  
                         ArrayList<String> laptopSpecs = new ArrayList<String>();
 
                         for(int i=0;i<laptopData.length;i++) {
                             laptopSpecs.add(laptopData[i]);
                         }
 
-                        // //print the laptopSpecs
-                        // for(int i=0;i<laptopSpecs.size();i++) {
-                        //     System.out.println(laptopSpecs.get(i));
-                        // }
                         laptop = new Laptop(laptopSpecs);
                         laptops.add(laptop);
-                    //}
+                    
 
                 }
-                // if(laptopData[12].equals("TRUE")&&laptopData[13].equals("TRUE")) {
-                    
-                //     ArrayList<String> laptopSpecs = new ArrayList<String>();
-
-                //     for(int i=0;i<laptopData.length;i++) {
-                //         laptopSpecs.add(laptopData[i]);
-                //     }
-
-                //     // //print the laptopSpecs
-                //     // for(int i=0;i<laptopSpecs.size();i++) {
-                //     //     System.out.println(laptopSpecs.get(i));
-                //     // }
-                //     Laptop laptop = new Laptop(laptopSpecs);
-                //     laptops.add(laptop);
-                // }
             }
             input.close();
             

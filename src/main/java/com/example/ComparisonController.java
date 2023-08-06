@@ -37,7 +37,6 @@ public class ComparisonController {
     
     @FXML
     protected void initialize() {
-        // TODO Auto-generated method stub
         laptopAComboBox.getItems().addAll("Macbook Pro", "Dell XPS", "HP Spectre", "Lenovo ThinkPad", "Asus ZenBook", "Acer Aspire", "Macbook Air", "MSI GF63", "Huawei MateBook", "Razer Blade", "Samsung Galaxy Book Pro", "Google Pixelbook Go", "Dell Inspiron", "Asus ROG Zephyrus", "Lenovo Yoga");
         laptopBComboBox.getItems().addAll("HP Pavilion", "Acer Predator Helios", "Lenovo Legion", "Macbook Pro 16", "Dell Alienware", "Microsoft Surface Pro", "HP Elite Dragonfly", "Lenovo IdeaPad", "Asus VivoBook", "Razer Blade Stealth", "Dell Latitude", "Macbook Air M1", "MSI Prestige", "Acer Swift", "LG Gram");
         
@@ -45,7 +44,6 @@ public class ComparisonController {
         
         // Register an event handler to handle choice selection
         compareBt.setOnAction(event -> handleChoiceSelection());
-        //laptopBComboBox.setOnAction(event -> handleChoiceSelection());
 
     }
 
@@ -53,15 +51,8 @@ public class ComparisonController {
         String selectedLaptopA = laptopAComboBox.getValue();
         String selectedLaptopB = laptopBComboBox.getValue();
 
-        System.out.println("Selected Laptop A: " + selectedLaptopA);
-        System.out.println("Selected Laptop B: " + selectedLaptopB);
-
         LaptopDatabase laptopDB = new LaptopDatabase();
         filteredLaptops = laptopDB.getComparedLaptops(selectedLaptopA, selectedLaptopB);
-
-        for (Laptop laptop : filteredLaptops) {
-            System.out.println(laptop.getName());
-        }
 
         showLaptops(filteredLaptops);
     }
@@ -102,7 +93,6 @@ public class ComparisonController {
 
      @FXML
     protected void goHome() throws IOException {
-        // TODO Auto-generated method stub
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
         Scene scene = new Scene(root);

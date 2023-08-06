@@ -14,22 +14,21 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class PFilterAppliedController {
-    
-    @FXML
-    private Label name1,cost1,ram1,storage1,processor1;
 
     @FXML
-    private Label name11,cost11,ram11,storage11,processor11;
+    private Label name1, cost1, ram1, storage1, processor1;
 
     @FXML
-    private Label name111,cost111,ram111,storage111,processor111;
+    private Label name11, cost11, ram11, storage11, processor11;
 
     @FXML
-    private ImageView img1,img11,img111;
+    private Label name111, cost111, ram111, storage111, processor111;
+
+    @FXML
+    private ImageView img1, img11, img111;
 
     @FXML
     private Button back;
-
 
     protected void showLaptops(ArrayList<Laptop> laptops) {
         if (laptops.size() >= 1) {
@@ -46,7 +45,7 @@ public class PFilterAppliedController {
             storage1.setText("");
             processor1.setText("");
         }
-    
+
         if (laptops.size() >= 2) {
             name11.setText("Name: " + laptops.get(1).getName());
             if (cost11 != null) {
@@ -77,7 +76,7 @@ public class PFilterAppliedController {
                 processor11.setText("");
             }
         }
-    
+
         if (laptops.size() >= 3) {
             name111.setText("Name: " + laptops.get(2).getName());
             if (cost111 != null) {
@@ -107,23 +106,18 @@ public class PFilterAppliedController {
             if (processor111 != null) {
                 processor111.setText("");
             }
+
         }
     }
-    
+
     @FXML
     protected void goBack() throws IOException {
-        System.out.println("GO Back method called");
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
 
         Parent root = loader.load();
-        //SpecificationController controller = loader.getController();
-        // controller.setscene(scene);
-
         Stage stage = App.getStage();
-        //Scene scene= new Scene(root,1500,1500);
         stage.setTitle("Program Filter");
         stage.setScene(new Scene(root));
-       // stage.setResizable(true);
         stage.show();
 
     }

@@ -53,7 +53,7 @@ public class AFeatureAppliedController {
         processor111.setText("Processor: " + laptops.get(2).getProcessor());
         img111.setImage(new Image(laptops.get(2).getUrl()));
 
-        // Set the message
+        // Set the text for some descriptive labels
         messageTop.setText(storedMessageTop);
         message1.setText(storedMessageInner);
         message11.setText(storedMessageInner);
@@ -67,16 +67,10 @@ public class AFeatureAppliedController {
        FXMLLoader loader = new FXMLLoader(getClass().getResource("AdditionalFeature.fxml"));
 
         Parent root = loader.load();
-        //SpecificationController controller = loader.getController();
-        // controller.setscene(scene);
-
         Stage stage = App.getStage();
-        //Scene scene= new Scene(root,1500,1500);
         stage.setTitle("Innovative Features");
         stage.setScene(new Scene(root));
-       // stage.setResizable(true);
         stage.show();
-
     }
 
     

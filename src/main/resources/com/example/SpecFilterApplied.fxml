@@ -24,21 +24,21 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <ImageView fitHeight="114.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-            <ImageView fitHeight="117.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="114.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="img11" fitHeight="114.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="img1" fitHeight="117.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img111" fitHeight="114.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label fx:id="name1" text="Name" />
+                  <Label fx:id="name1" prefHeight="18.0" prefWidth="142.0" text="Name" />
                   <Label fx:id="cost1" prefHeight="18.0" prefWidth="122.0" text="Cost" />
-                  <Label fx:id="ram1" text="Ram" />
+                  <Label fx:id="ram1" prefHeight="18.0" prefWidth="185.0" text="Ram" />
                   <Label fx:id="storage1" prefHeight="18.0" prefWidth="115.0" text="Storage" />
                   <Label fx:id="processor1" prefHeight="18.0" prefWidth="126.0" text="Processor" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="name11" text="Name" />
+                  <Label fx:id="name11" prefHeight="18.0" prefWidth="233.0" text="Name" />
                   <Label fx:id="cost" prefHeight="6.0" prefWidth="28.0" text="Cost" />
                   <Label fx:id="ram11" text="Ram" />
                   <Label fx:id="storage11" prefHeight="18.0" prefWidth="83.0" text="Storage" />
@@ -47,11 +47,11 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="name111" text="Name" />
-                  <Label fx:id="cost111" prefHeight="6.0" prefWidth="28.0" text="Cost" />
-                  <Label fx:id="ram111" text="Ram" />
-                  <Label fx:id="storage111" prefHeight="18.0" prefWidth="36.0" text="Storage" />
-                  <Label fx:id="processor111" prefHeight="6.0" prefWidth="28.0" text="Processor" />
+                  <Label fx:id="name111" prefHeight="18.0" prefWidth="231.0" text="Name" />
+                  <Label fx:id="cost111" prefHeight="6.0" prefWidth="214.0" text="Cost" />
+                  <Label fx:id="ram111" prefHeight="18.0" prefWidth="312.0" text="Ram" />
+                  <Label fx:id="storage111" prefHeight="18.0" prefWidth="234.0" text="Storage" />
+                  <Label fx:id="processor111" prefHeight="18.0" prefWidth="200.0" text="Processor" />
                </children>
             </VBox>
          </children>
@@ -66,7 +66,7 @@
                   <Font name="Bodoni MT Bold" size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="82.0" prefWidth="234.0" text="SpecFilterApplied">
+            <Label prefHeight="82.0" prefWidth="288.0" text="Ideal Laptops for you!">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>

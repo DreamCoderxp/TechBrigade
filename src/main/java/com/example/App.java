@@ -34,6 +34,7 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
+    
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
@@ -50,20 +51,14 @@ public class App extends Application {
 
     @FXML
     public void showSpecFilter() throws IOException {
-        // Parent root =
-        // FXMLLoader.load(getClass().getResource("HighEndLaptopRecommendations.fxml"));
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
 
         Parent root = loader.load();
-        SpecificationController controller = loader.getController();
-        // controller.setscene(scene);
-
         Stage stage = new Stage();
         scene= new Scene(root);
         stage.setTitle("Specification Filter");
         stage.setScene(scene);
-       // stage.setResizable(true);
         stage.show();
     }
 
@@ -83,8 +78,6 @@ public class App extends Application {
     protected void showPortability() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Portability.fxml"));
         Parent root = loader.load();
-        PortabilityController controller = loader.getController();
-        // controller.setscene(scene);
 
         Stage stage = App.getStage();
         stage.setTitle("Portability");
@@ -96,8 +89,6 @@ public class App extends Application {
     protected void showHighEndLaptopRecommendations() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("HighEndLaptopRecommendations.fxml"));
         Parent root = loader.load();
-        //HighEndLaptopRecommendationsController controller = loader.getController();
-        // controller.setscene(scene);
 
         Stage stage = App.getStage();
         stage.setTitle("High End Laptop Recommendations");
@@ -109,8 +100,6 @@ public class App extends Application {
     protected void showProgramTailored() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
         Parent root = loader.load();
-        //ProgramTailoredController controller = loader.getController();
-        // controller.setscene(scene);
 
         Stage stage = App.getStage();
         stage.setTitle("Program Tailored");

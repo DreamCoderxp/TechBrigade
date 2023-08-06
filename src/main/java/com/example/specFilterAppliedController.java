@@ -116,19 +116,11 @@ public class specFilterAppliedController {
     
     @FXML
     protected void goBack() throws IOException {
-        System.out.println("GO BAck method called");
        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
 
         Parent root = loader.load();
-        //SpecificationController controller = loader.getController();
-        // controller.setscene(scene);
-
         Stage stage = App.getStage();
-        //Scene scene= new Scene(root,1500,1500);
-        stage.setTitle("Specification Filter");
         stage.setScene(new Scene(root));
-       // stage.setResizable(true);
         stage.show();
-
     }
 }
