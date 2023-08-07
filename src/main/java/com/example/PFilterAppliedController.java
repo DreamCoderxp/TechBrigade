@@ -13,25 +13,39 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+/**
+ * This class is the controller for the Program Filter Applied page.
+ * It displays up to three laptops that match the selected program filter.
+ * The user can click on the Back button to go back to the Program Tailored page.
+ * 
+ * @author Manjinder Singh
+ */
 public class PFilterAppliedController {
 
+    // Labels for displaying laptop properties
     @FXML
     private Label name1, cost1, ram1, storage1, processor1;
-
     @FXML
     private Label name11, cost11, ram11, storage11, processor11;
-
     @FXML
     private Label name111, cost111, ram111, storage111, processor111;
 
+    // ImageViews for displaying laptop images
     @FXML
     private ImageView img1, img11, img111;
 
+    // Button for going back to the Program Tailored page
     @FXML
     private Button back;
 
+    /**
+     * Displays up to three laptops that match the selected program filter.
+     * 
+     * @param laptops The ArrayList of laptops to display.
+     */
     protected void showLaptops(ArrayList<Laptop> laptops) {
         if (laptops.size() >= 1) {
+            // Set the text and image for the first laptop
             name1.setText("Name: " + laptops.get(0).getName());
             cost1.setText("Cost: " + Double.toString(laptops.get(0).getCost()));
             ram1.setText("RAM: " + Integer.toString(laptops.get(0).getRam()));
@@ -47,6 +61,7 @@ public class PFilterAppliedController {
         }
 
         if (laptops.size() >= 2) {
+            // Set the text and image for the second laptop
             name11.setText("Name: " + laptops.get(1).getName());
             if (cost11 != null) {
                 cost11.setText("Cost: " + Double.toString(laptops.get(1).getCost()));
@@ -78,6 +93,7 @@ public class PFilterAppliedController {
         }
 
         if (laptops.size() >= 3) {
+            // Set the text and image for the third laptop
             name111.setText("Name: " + laptops.get(2).getName());
             if (cost111 != null) {
                 cost111.setText("Cost: " + Double.toString(laptops.get(2).getCost()));
@@ -110,6 +126,9 @@ public class PFilterAppliedController {
         }
     }
 
+    /**
+     * Goes back to the Program Tailored page.
+     */
     @FXML
     protected void goBack() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
@@ -119,6 +138,5 @@ public class PFilterAppliedController {
         stage.setTitle("Program Filter");
         stage.setScene(new Scene(root));
         stage.show();
-
     }
 }

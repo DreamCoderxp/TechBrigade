@@ -13,25 +13,42 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for the view that displays laptops after applying specific filters.
+ * 
+ * @author Jaskaran Sharma Punj
+ */
 public class specFilterAppliedController {
-    
-    @FXML
-    private Label name1,cost1,ram1,storage1,processor1;
 
+    // UI components for the first laptop
     @FXML
-    private Label name11,cost11,ram11,storage11,processor11;
-
+    private Label name1, cost1, ram1, storage1, processor1;
     @FXML
-    private Label name111,cost111,ram111,storage111,processor111;
+    private ImageView img1;
 
+    // UI components for the second laptop
     @FXML
-    private ImageView img1, img11, img111;
+    private Label name11, cost11, ram11, storage11, processor11;
+    @FXML
+    private ImageView img11;
 
+    // UI components for the third laptop.
+    @FXML
+    private Label name111, cost111, ram111, storage111, processor111;
+    @FXML
+    private ImageView img111;
+
+    // Button to navigate back
     @FXML
     private Button back;
 
-
+    /**
+     * Populates the view with laptop details from the provided list.
+     * 
+     * @param laptops List of laptops to be displayed.
+     */
     protected void showLaptops(ArrayList<Laptop> laptops) {
+        // Display details for the first laptop if available
         if (laptops.size() >= 1) {
             name1.setText("Name: " + laptops.get(0).getName());
             cost1.setText("Cost: " + Double.toString(laptops.get(0).getCost()));
@@ -40,84 +57,55 @@ public class specFilterAppliedController {
             processor1.setText("Processor: " + laptops.get(0).getProcessor());
             img1.setImage(new Image(laptops.get(0).getUrl()));
         } else {
+            // Clear details if not available
             name1.setText("");
             cost1.setText("");
             ram1.setText("");
             storage1.setText("");
             processor1.setText("");
         }
-        
+
+        // Display details for the second laptop if available
         if (laptops.size() >= 2) {
             name11.setText("Name: " + laptops.get(1).getName());
-            if (cost11 != null) {
-                cost11.setText("Cost: " + Double.toString(laptops.get(1).getCost()));
-            }
-            if (ram11 != null) {
-                ram11.setText("RAM: " + Integer.toString(laptops.get(1).getRam()));
-            }
-            if (storage11 != null) {
-                storage11.setText("Storage: " + Integer.toString(laptops.get(1).getStorage()));
-            }
-            if (processor11 != null) {
-                processor11.setText("Processor: " + laptops.get(1).getProcessor());
-            }
-            if (img11 != null) {
-                img11.setImage(new Image(laptops.get(1).getUrl()));
-            }
+            cost11.setText("Cost: " + Double.toString(laptops.get(1).getCost()));
+            ram11.setText("RAM: " + Integer.toString(laptops.get(1).getRam()));
+            storage11.setText("Storage: " + Integer.toString(laptops.get(1).getStorage()));
+            processor11.setText("Processor: " + laptops.get(1).getProcessor());
+            img11.setImage(new Image(laptops.get(1).getUrl()));
         } else {
+            // Clear details if not available
             name11.setText("");
-            if (cost11 != null) {
-                cost11.setText("");
-            }
-            if (ram11 != null) {
-                ram11.setText("");
-            }
-            if (storage11 != null) {
-                storage11.setText("");
-            }
-            if (processor11 != null) {
-                processor11.setText("");
-            }
+            cost11.setText("");
+            ram11.setText("");
+            storage11.setText("");
+            processor11.setText("");
         }
-        
+
+        // Display details for the third laptop if available
         if (laptops.size() >= 3) {
             name111.setText("Name: " + laptops.get(2).getName());
-            if (cost111 != null) {
-                cost111.setText("Cost: " + Double.toString(laptops.get(2).getCost()));
-            }
-            if (ram111 != null) {
-                ram111.setText("RAM: " + Integer.toString(laptops.get(2).getRam()));
-            }
-            if (storage111 != null) {
-                storage111.setText("Storage: " + Integer.toString(laptops.get(2).getStorage()));
-            }
-            if (processor111 != null) {
-                processor111.setText("Processor: " + laptops.get(2).getProcessor());
-            }
-            if (img111 != null) {
-                img111.setImage(new Image(laptops.get(2).getUrl()));
-            }
+            cost111.setText("Cost: " + Double.toString(laptops.get(2).getCost()));
+            ram111.setText("RAM: " + Integer.toString(laptops.get(2).getRam()));
+            storage111.setText("Storage: " + Integer.toString(laptops.get(2).getStorage()));
+            processor111.setText("Processor: " + laptops.get(2).getProcessor());
+            img111.setImage(new Image(laptops.get(2).getUrl()));
         } else {
+            // Clear details if not available
             name111.setText("");
-            if (cost111 != null) {
-                cost111.setText("");
-            }
-            if (ram111 != null) {
-                ram111.setText("");
-            }
-            if (storage111 != null) {
-                storage111.setText("");
-            }
-            if (processor111 != null) {
-                processor111.setText("");
-            }
+            cost111.setText("");
+            ram111.setText("");
+            storage111.setText("");
+            processor111.setText("");
         }
     }
-    
+
+    /**
+     * Navigates back to the SpecificationFilter view.
+     */
     @FXML
     protected void goBack() throws IOException {
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
-
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
         Parent root = loader.load();
         Stage stage = App.getStage();
         stage.setScene(new Scene(root));

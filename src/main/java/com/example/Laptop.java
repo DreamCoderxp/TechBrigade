@@ -2,6 +2,11 @@ package com.example;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a laptop with various specifications.
+ * 
+ * @auther: Divya, Manjinder, Jaskaran, Gurleen
+ */
 public class Laptop {
     private int id;
     private String name;
@@ -25,6 +30,9 @@ public class Laptop {
     private int warranty;
     private double review;
     private double lifespan;
+
+    private String url;
+
     public String getScreenInfo() {
         return screenInfo;
     }
@@ -48,8 +56,24 @@ public class Laptop {
         this.url = url;
     }
 
-    private String url;
-
+     /**
+     * Creates a new Laptop object with the given specifications.
+     * This constructor is only for the high-end laptops.
+     * 
+     * @param name The name of the laptop.
+     * @param brand The brand of the laptop.
+     * @param processor The processor of the laptop.
+     * @param os The operating system of the laptop.
+     * @param ram The RAM of the laptop.
+     * @param storage The storage of the laptop.
+     * @param url The URL of the laptop.
+     * @param weight The weight of the laptop.
+     * @param screenInfo The screen information of the laptop.
+     * @param copyType The CPU type of the laptop.
+     * @param benchmark The benchmark score of the laptop.
+     * @param cost The cost of the laptop.
+     * @param link The link to the laptop.
+     */
     public Laptop(String name, String brand, String processor, String os, int ram, int storage, String url, double weight, String screenInfo, String copyType, int benchmark, double cost, String link) {
         this.name = name;
         this.brand = brand;
@@ -66,7 +90,11 @@ public class Laptop {
         this.link = link;
     }
 
-
+     /**
+     * Creates a new Laptop object with the given specifications.
+     * 
+     * @param laptopSpecs The ArrayList of laptop specifications.
+     */
     public Laptop(ArrayList<String> laptopSpecs) {
         this.url= LaptopDatabase.getLaptopUrl(Integer.parseInt(laptopSpecs.get(0)));
         this.id = Integer.parseInt(laptopSpecs.get(0));

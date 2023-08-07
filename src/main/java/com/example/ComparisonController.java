@@ -14,39 +14,53 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for the Comparison.fxml file.
+ * Allows the user to compare two laptops.
+ * 
+ * @author Jaskaran Sharma Punj
+ */
 public class ComparisonController {
     
+    // ComboBoxes for selecting laptops
     @FXML
     private ComboBox<String> laptopAComboBox;
     @FXML
     private ComboBox<String> laptopBComboBox;
 
+    // Labels for displaying laptop information
     @FXML
     private Label name1,cost1,weight1,processor1,screen1,os1,storage1,ram1,battery1;
-
     @FXML
     private Label name11,cost11,weight11,processor11,screen11,os11,storage11,ram11,battery11;
 
+    // ImageViews for displaying laptop images
     @FXML
     private ImageView img1, img11;
     
+    // Button for comparing laptops
     @FXML
     private Button compareBt;
     
+    // ArrayList for storing two specfified laptops.
     ArrayList<Laptop> filteredLaptops;
     
+    /**
+     * Initializes the ComboBoxes with laptop names.
+     */
     @FXML
     protected void initialize() {
         laptopAComboBox.getItems().addAll("Macbook Pro", "Dell XPS", "HP Spectre", "Lenovo ThinkPad", "Asus ZenBook", "Acer Aspire", "Macbook Air", "MSI GF63", "Huawei MateBook", "Razer Blade", "Samsung Galaxy Book Pro", "Google Pixelbook Go", "Dell Inspiron", "Asus ROG Zephyrus", "Lenovo Yoga");
         laptopBComboBox.getItems().addAll("HP Pavilion", "Acer Predator Helios", "Lenovo Legion", "Macbook Pro 16", "Dell Alienware", "Microsoft Surface Pro", "HP Elite Dragonfly", "Lenovo IdeaPad", "Asus VivoBook", "Razer Blade Stealth", "Dell Latitude", "Macbook Air M1", "MSI Prestige", "Acer Swift", "LG Gram");
         
-        
-        
-        // Register an event handler to handle choice selection
+        // When the user selects two laptops, display their information
         compareBt.setOnAction(event -> handleChoiceSelection());
 
     }
 
+    /**
+     * Handles the selection of two laptops and displays their information.
+     */
     protected void handleChoiceSelection() {
         String selectedLaptopA = laptopAComboBox.getValue();
         String selectedLaptopB = laptopBComboBox.getValue();
@@ -57,11 +71,16 @@ public class ComparisonController {
         showLaptops(filteredLaptops);
     }
 
-
+    /**
+     * Displays the information of the selected laptops.
+     * 
+     * @param laptops The ArrayList of laptops to display.
+     */
     protected void showLaptops(ArrayList<Laptop> laptops) {
 
         for (int i = 0; i < laptops.size(); i++) {
             if (i == 0) {
+                 // Set the text and image for the first laptop
                 name1.setText("Name: " + laptops.get(i).getName());
                 cost1.setText("Cost: $" + Double.toString(laptops.get(i).getCost()));
                 weight1.setText("Weight: " + Double.toString(laptops.get(i).getWeight()) + " lbs");
@@ -75,6 +94,7 @@ public class ComparisonController {
             } 
     
             if (i == 1) {
+                 // Set the text and image for the second laptop
                 name11.setText("Name: " + laptops.get(i).getName());
                 cost11.setText("Cost: $" + Double.toString(laptops.get(i).getCost()));
                 weight11.setText("Weight: " + Double.toString(laptops.get(i).getWeight()) + " lbs");
@@ -89,9 +109,10 @@ public class ComparisonController {
         }
     }
 
-    
-
-     @FXML
+    /**
+     * Goes back to the Front page.
+     */
+    @FXML
     protected void goHome() throws IOException {
         Stage stage = App.getStage();
         Parent root = FXMLLoader.load(getClass().getResource("Front.fxml"));
@@ -99,7 +120,5 @@ public class ComparisonController {
         stage.setScene(scene);
         stage.show();
     }
-
- 
 
 }

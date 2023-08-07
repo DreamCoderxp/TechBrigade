@@ -17,12 +17,25 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * This class is the controller for the High-End Laptop Recommendations page.
+ * It displays a list of high-end laptops with their specifications and prices.
+ * 
+ * @author Manjinder Singh
+ */
 public class HighEndLaptopRecommendationsController {
+    
+    // ListView for displaying the laptops
     @FXML
     private ListView<HBox> listView;
 
+    /**
+     * Initializes the controller by defining the high-end laptops and adding them to the ListView.
+     * Each laptop is displayed with its image, name, specifications, and price.
+     */
     public void initialize() {
-        // define high-end highEndLaptops
+        
+        // Define high-end laptops
         List<Laptop> Laptops = Arrays.asList(
                 new Laptop("Alienware m18", "Intel",
                         "13th Generation Core i9-13980HX (E-Cores upto 4.00 Ghz P-cores up to 5.60Ghz",
@@ -42,7 +55,7 @@ public class HighEndLaptopRecommendationsController {
                         "1x3.5mm Headphone jack 1xHDMI2.1 1xDisplayPort(with G-Sync) 1xEthernet 2xUBS-A3.2Gen1 2xUSB-C3.2Gen2",
                         17843, 5399.99, "https://laptopmedia.com/wp-content/uploads/2022/01/2-43.jpg"));
 
-        // add highEndLaptops to list view
+        // Add high-end laptops to ListView
         for (Laptop Laptop : Laptops) {
             HBox hbox = new HBox(10);
             ImageView imageView = new ImageView(new Image(Laptop.getLink()));
@@ -78,6 +91,9 @@ public class HighEndLaptopRecommendationsController {
         }
     }
 
+    /**
+     * Goes back to the Home page.=
+     */
     @FXML
     protected void goHome() throws IOException {
         Stage stage = App.getStage();

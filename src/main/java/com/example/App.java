@@ -1,3 +1,6 @@
+/**
+ * The App class is the main class of the application. It extends the JavaFX Application class and provides the entry point for the application.
+ */
 package com.example;
 
 import javafx.application.Application;
@@ -9,19 +12,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     private static Scene scene;
     private static Stage stage;
 
-    /**
-     *
-     * @param stage
-     * @throws IOException
-     */
     @Override
     public void start(Stage stage) throws IOException {
         App.stage = stage;
@@ -34,7 +29,6 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
-    
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
@@ -49,19 +43,25 @@ public class App extends Application {
         return stage;
     }
 
+    /**
+     * The showSpecFilter method loads and shows the SpecificationFilter.fxml file in the main stage.
+     */
     @FXML
     public void showSpecFilter() throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SpecificationFilter.fxml"));
 
         Parent root = loader.load();
-        Stage stage = new Stage();
+        Stage stage = App.getStage();
         scene= new Scene(root);
         stage.setTitle("Specification Filter");
         stage.setScene(scene);
         stage.show();
     }
 
+    /**
+     * The showAdditionalFeature method loads and shows the AdditionalFeature.fxml file in the main stage.
+     */
     @FXML
     protected void showAdditionalFeature() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AdditionalFeature.fxml"));
@@ -74,6 +74,9 @@ public class App extends Application {
 
     }
 
+    /**
+     * The showPortability method loads and shows the Portability.fxml file in the main stage.
+     */
     @FXML
     protected void showPortability() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Portability.fxml"));
@@ -85,6 +88,9 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * The showHighEndLaptopRecommendations method loads and shows the HighEndLaptopRecommendations.fxml file in the main stage.
+     */
     @FXML
     protected void showHighEndLaptopRecommendations() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("HighEndLaptopRecommendations.fxml"));
@@ -96,6 +102,9 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * The showProgramTailored method loads and shows the ProgramTailored.fxml file in the main stage.
+     */
     @FXML
     protected void showProgramTailored() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ProgramTailored.fxml"));
@@ -107,7 +116,9 @@ public class App extends Application {
         stage.show();
     }
 
-
+    /**
+     * The showCostSavingAnalysis method loads and shows the CostSavingAnalysis.fxml file in the main stage.
+     */
     @FXML
     protected void showCostSavingAnalysis() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CostSavingAnalysis.fxml"));
@@ -119,6 +130,9 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * The showLifespanEstimation method loads and shows the LifespanEstimation.fxml file in the main stage.
+     */
     @FXML
     protected void showLifespanEstimation() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LifespanEstimation.fxml"));
@@ -130,6 +144,9 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+     * The showComparison method loads and shows the Comparison.fxml file in the main stage.
+     */
     @FXML
     protected void showComparison() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Comparison.fxml"));
